@@ -1,0 +1,4 @@
+# internal tooling — never publish with the site
+.claude/
+.impeccable.md
+.DS_Store

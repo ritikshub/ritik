@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en" data-time="din">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books · Ritik</title>
+<!-- SWAP: description for this page. -->
+<meta name="description" content="What Ritik is reading, and what he has gone back to.">
+<meta name="theme-color" content="#f5f0e7">
+<link rel="canonical" href="https://ritik.wtf/books/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ritik.wtf/books/">
+<meta property="og:title" content="Books · Ritik">
+<meta property="og:description" content="What Ritik is reading, and what he has gone back to.">
+
+<!-- the lamp runs before first paint. light is the default and we never
+     follow the OS, so there is no flash and no surprise. the failsafe
+     un-hides the page if site.js never arrives. -->
+<script>
+(function(){var d=document.documentElement;
+try{var t=localStorage.getItem('ritik-lamp');d.dataset.time=(t==='raat')?'raat':'din';}catch(e){}
+d.classList.add('reveal-ready');
+setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');},1200);})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+<a class="skip" href="#main">skip to content</a>
+
+<!-- ==========================================================
+     THE MARKS — drawn once, inlined on every page.
+     <use> cannot reach an external SVG file in Chrome, and these
+     must render without javascript.
+
+     #figure     the hero: a raja on horseback, Mithila style, same grammar as the
+                 lotus: heavy outer contour, a thin second contour just
+                 inside it, diagonal hatch in the filled fields.
+     #bloom-mini the kohbar lotus, contour only. 15px section heads,
+                 7px book marks, 5px nav dot. below 20px the detail
+                 turns to mud, which is why it is the simplified one.
+     ========================================================== -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- only #figure fills with this, so it can be geru without dragging
+         the small lotuses along with it -->
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1" opacity=".32"/>
+    </pattern>
+  </defs>
+
+  <symbol id="figure" viewBox="0 0 340 300">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+
+      <!-- ============ THE PANEL BORDER ============
+           a Madhubani painting opens with a double-lined border, the band
+           between the lines filled with pattern. corner rosettes. -->
+      <path d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
+      <rect x="5" y="5" width="330" height="290" stroke-width="2.2"/>
+      <rect x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
+      <g stroke-width="1.3">
+        <circle cx="9" cy="9" r="2.6"/><circle cx="331" cy="9" r="2.6"/>
+        <circle cx="9" cy="291" r="2.6"/><circle cx="331" cy="291" r="2.6"/>
+      </g>
+
+      <!-- ============ FIELD FILLERS — no space left empty ============ -->
+      <g opacity=".85">
+        <circle cx="52" cy="48" r="8" stroke-width="1.8"/>
+        <circle cx="52" cy="48" r="4.6" stroke-width="1" opacity=".7"/>
+        <g stroke-width="1.4">
+          <path d="M52 36 L52 31"/><path d="M52 60 L52 65"/>
+          <path d="M40 48 L35 48"/><path d="M64 48 L69 48"/>
+          <path d="M44 40 L40 36"/><path d="M60 56 L64 60"/>
+          <path d="M44 56 L40 60"/><path d="M60 40 L64 36"/>
+        </g>
+        <svg x="272" y="32" width="24" height="24" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+        <g stroke-width="1.5">
+          <path d="M66 252 C64 240 66 228 72 220"/>
+          <path d="M66 244 C60 242 56 237 56 231"/>
+          <path d="M67 234 C62 230 61 225 63 220"/>
+          <path d="M68 244 C74 242 77 237 76 231"/>
+          <path d="M69 232 C74 229 76 224 74 219"/>
+        </g>
+        <circle cx="185" cy="236" r="4" stroke-width="1.5"/>
+        <g fill="currentColor" stroke="none">
+          <circle cx="185" cy="228" r="1.6"/><circle cx="192" cy="232" r="1.6"/>
+          <circle cx="192" cy="240" r="1.6"/><circle cx="185" cy="244" r="1.6"/>
+          <circle cx="178" cy="240" r="1.6"/><circle cx="178" cy="232" r="1.6"/>
+        </g>
+      </g>
+
+      <!-- ============ THE RIDER PANEL, shifted into the field ============ -->
+      <g transform="translate(6 20)">
+
+      <!-- ============ THE HORSE, facing left ============
+           folk grammar: flat tubular body, hatch panels, scallop mane,
+           dot rows, straight banded legs. no ballooning curves. -->
+
+      <!-- tail -->
+      <path d="M244 120 C280 122 300 150 300 194 C295 182 287 175 277 176
+               C286 154 274 134 242 130Z" fill="url(#hatch)" stroke-width="2.2"/>
+      <path d="M252 130 C274 138 286 156 288 176" stroke-width="1" opacity=".7"/>
+
+      <!-- legs: straight, tapered, fetlock-banded. far pair then near pair. -->
+      <g style="fill:var(--paper)">
+        <path d="M116 162 L113 244 L124 244 L127 164Z" stroke-width="2"/>
+        <path d="M204 162 L205 244 L216 244 L217 164Z" stroke-width="2"/>
+        <path d="M136 164 L133 246 L147 246 L150 166Z" stroke-width="2.4"/>
+        <path d="M226 164 L228 246 L241 246 L241 166Z" stroke-width="2.4"/>
+      </g>
+      <g stroke-width="1.3">
+        <path d="M114 232 L125 233"/><path d="M134 234 L148 235"/>
+        <path d="M206 232 L217 233"/><path d="M229 234 L242 235"/>
+      </g>
+      <path d="M111 244 L125 244 L127 256 L108 256Z" fill="currentColor" stroke="none"/>
+      <path d="M203 244 L217 244 L219 256 L200 256Z" fill="currentColor" stroke="none"/>
+      <path d="M131 246 L148 246 L150 258 L128 258Z" fill="currentColor" stroke="none"/>
+      <path d="M226 246 L242 246 L244 258 L223 258Z" fill="currentColor" stroke="none"/>
+
+      <!-- neck: one straight hatched band from poll to chest -->
+      <path d="M100 52 C94 58 88 62 84 68 C96 96 108 124 122 150
+               L146 122 C132 96 116 70 100 52Z"
+            fill="url(#hatch)" stroke-width="2.6"/>
+      <path d="M88 70 C99 94 110 118 121 142" stroke-width="1" opacity=".7"/>
+
+      <!-- mane: a row of scallops down the crest -->
+      <path d="M104 58 a7 8 0 0 1 9 15 a7 8 0 0 1 9 15 a7 8 0 0 1 10 15 a7 8 0 0 1 10 15"
+            stroke-width="2"/>
+
+      <!-- head: a small wedge, muzzle tapering down-left -->
+      <path d="M104 56 C96 50 84 50 74 56 C62 63 52 72 48 80
+               C45 86 47 92 53 94 C62 97 74 95 84 90
+               C94 85 102 74 104 64 C105 61 105 58 104 56Z"
+            style="fill:var(--paper)" stroke-width="2.4"/>
+      <path d="M100 58 C90 54 80 55 72 60" stroke-width="1" opacity=".7"/>
+      <path d="M100 52 C98 40 102 30 108 26 C112 32 112 44 110 52Z" stroke-width="2"/>
+      <path d="M112 52 C111 41 115 32 120 28 C124 34 124 45 121 53Z" stroke-width="2"/>
+
+      <!-- the big lashed eye, muzzle band, nostril, mouth -->
+      <path d="M64 74 C70 68 80 68 86 74 C80 80 70 80 64 74Z" stroke-width="1.8"/>
+      <circle cx="75" cy="74" r="2.4" fill="currentColor" stroke="none"/>
+      <g stroke-width="1.2">
+        <path d="M86 71 L91 68"/><path d="M87 74 L93 73"/><path d="M86 77 L91 79"/>
+      </g>
+      <g stroke-width="1.4">
+        <path d="M63 64 L59 82"/><path d="M67 66 L63 84"/>
+      </g>
+      <circle cx="54" cy="84" r="1.5" fill="currentColor" stroke="none"/>
+      <path d="M50 90 C54 93 59 94 63 93" stroke-width="1.4"/>
+
+      <!-- body: a flat tube with a squared rump -->
+      <path d="M130 118 C166 112 208 112 242 116 C250 118 252 126 251 136
+               L248 158 C246 166 240 170 232 170 L138 170
+               C128 170 122 162 122 152 L124 128 C125 122 127 118 130 118Z"
+            style="fill:var(--paper)" stroke-width="2.6"/>
+      <path d="M136 124 C170 118 206 118 238 122" stroke-width="1" opacity=".7"/>
+      <path d="M144 164 C172 168 204 168 230 164" stroke-width="1" opacity=".7"/>
+
+      <!-- dot rows along back and belly, the Madhubani filler -->
+      <g fill="currentColor" stroke="none">
+        <circle cx="221" cy="128" r="1.3"/><circle cx="233" cy="129" r="1.3"/>
+        <circle cx="144" cy="160" r="1.3"/><circle cx="157" cy="161" r="1.3"/>
+        <circle cx="170" cy="162" r="1.3"/><circle cx="183" cy="162" r="1.3"/>
+        <circle cx="196" cy="162" r="1.3"/><circle cx="209" cy="161" r="1.3"/>
+        <circle cx="222" cy="160" r="1.3"/>
+      </g>
+
+      <!-- chest band and haunch band, with bells -->
+      <g stroke-width="1.8">
+        <path d="M134 120 C130 136 129 152 132 168"/>
+        <path d="M228 118 C226 134 226 152 229 168"/>
+      </g>
+      <g stroke-width="1">
+        <path d="M140 120 C136 136 135 152 138 168" opacity=".7"/>
+        <path d="M234 118 C232 134 232 152 235 168" opacity=".7"/>
+      </g>
+      <g stroke-width="1.4">
+        <circle cx="131" cy="140" r="2.4"/><circle cx="130" cy="154" r="2.4"/>
+        <circle cx="227" cy="142" r="2.4"/>
+      </g>
+
+      <!-- rein, mouth to fist -->
+      <path d="M58 92 C90 112 116 116 139 110" stroke-width="1.6"/>
+
+      <!-- ============ THE SADDLE BLANKET ============ -->
+      <path d="M150 114 L216 112 L217 148 A8 6 0 0 1 201 150 A8 6 0 0 1 185 152
+               A8 6 0 0 1 169 154 A8 6 0 0 1 153 156Z"
+            style="fill:var(--paper)" stroke-width="2.2"/>
+      <path d="M156 120 L210 118 L211 142 L157 146Z" fill="url(#hatch)" stroke-width="1" opacity=".85"/>
+
+      <!-- ============ THE RAJA ============ -->
+
+      <!-- leg over the blanket, slipper pointing left -->
+      <path d="M160 150 C157 156 156 161 158 166 L172 168 C170 162 170 156 172 150Z"
+            style="fill:var(--paper)" stroke-width="2"/>
+      <path d="M152 166 L172 168 L170 177 L149 173Z" fill="currentColor" stroke="none"/>
+
+      <!-- torso: patterned angavastram with a paper sash -->
+      <path d="M174 58 C169 78 168 98 171 116 L206 118 C210 98 210 78 205 58
+               C195 52 184 52 174 58Z" style="fill:var(--paper)" stroke="none"/>
+      <path d="M174 58 C169 78 168 98 171 116 L206 118 C210 98 210 78 205 58
+               C195 52 184 52 174 58Z" fill="url(#hatch)" stroke-width="2.4"/>
+      <path d="M172 94 L206 82 L206 89 L172 101Z" style="fill:var(--paper)" stroke-width="1.6"/>
+
+      <!-- rein arm and fist -->
+      <path d="M181 66 C167 73 153 88 145 104 L153 112 C161 97 173 85 188 77Z"
+            style="fill:var(--paper)" stroke-width="2.2"/>
+      <circle cx="143" cy="109" r="4.5" style="fill:var(--paper)" stroke-width="2"/>
+
+      <!-- neck and haar -->
+      <path d="M186 46 L185 60 L200 60 L198 44Z" style="fill:var(--paper)" stroke="none"/>
+      <g stroke-width="2">
+        <path d="M186 48 L185 59"/><path d="M198 46 L199 58"/>
+      </g>
+      <path d="M184 56 C190 61 196 61 201 55" stroke-width="1.5"/>
+
+      <!-- head, looking left -->
+      <path d="M194 14 C208 16 216 26 216 40 C216 52 210 62 200 66
+               C192 69 185 66 183 60 C182 56 183 53 186 51
+               C181 49 178 45 177 40 C176 36 173 35 170 34
+               C167 33 167 30 170 28 L177 25 C180 18 186 13 194 14Z"
+            style="fill:var(--paper)" stroke-width="2.4"/>
+
+      <!-- brow, eye, nostril, moustache, mouth -->
+      <path d="M190 28 C185 26 180 27 176 30" stroke-width="1.8"/>
+      <path d="M190 37 C187 33 181 33 177 37 C181 41 187 41 190 37Z" stroke-width="1.8"/>
+      <circle cx="184" cy="37" r="2.4" fill="currentColor" stroke="none"/>
+      <path d="M171 40 C173 40 174 42 172 43" stroke-width="1.3"/>
+      <path d="M172 45 C177 50 184 52 191 50 C193 49 194 47 193 45" stroke-width="1.9"/>
+      <path d="M175 54 C179 56 183 56 186 55" stroke-width="1.4"/>
+
+      <!-- kundal and the bun -->
+      <circle cx="203" cy="62" r="3" stroke-width="1.6"/>
+      <path d="M212 52 C220 52 224 58 222 64 C218 68 212 66 210 61Z"
+            fill="url(#hatch)" stroke-width="1.8"/>
+
+      <!-- the mukut -->
+      <path d="M172 14 C171 7 174 2 179 1 C183 5 184 10 183 14Z"
+            fill="url(#hatch)" stroke-width="1.9"/>
+      <path d="M187 12 C187 4 191 0 196 0 C201 2 203 7 202 11Z"
+            fill="url(#hatch)" stroke-width="2.1"/>
+      <path d="M206 12 C206 6 209 2 214 1 C218 4 219 9 218 13Z"
+            fill="url(#hatch)" stroke-width="1.9"/>
+      <path d="M174 24 C188 16 204 15 216 21 L219 10 C204 3 186 4 170 13Z"
+            style="fill:var(--paper)" stroke-width="2.2"/>
+      <path d="M178 18 C190 12 203 12 213 15" stroke-width="1" opacity=".7"/>
+      <g stroke-width="1.4">
+        <circle cx="181" cy="18" r="2.2"/><circle cx="195" cy="15" r="2.2"/><circle cx="209" cy="16" r="2.2"/>
+      </g>
+
+      <!-- the raised talwar: the fight is stated, not implied -->
+      <path d="M202 74 C209 66 217 57 223 50 L231 56 C225 63 217 72 210 80Z"
+            style="fill:var(--paper)" stroke-width="2.2"/>
+      <path d="M228 42 C236 30 248 18 260 10 C264 7 267 10 265 15
+               C258 28 247 41 235 51Z" style="fill:var(--paper)" stroke-width="2.2"/>
+      <path d="M234 41 C242 31 251 22 258 15" stroke-width="1" opacity=".7"/>
+      <path d="M224 45 L236 54" stroke-width="2.2"/>
+      <circle cx="228" cy="49" r="4.5" style="fill:var(--paper)" stroke-width="2"/>
+      <circle cx="221" cy="52" r="2.2" fill="currentColor" stroke="none"/>
+
+      <!-- kachni stipple on the haunch -->
+      <g fill="currentColor" stroke="none">
+        <circle cx="238" cy="136" r="1.1"/><circle cx="246" cy="138" r="1.1"/>
+        <circle cx="240" cy="146" r="1.1"/><circle cx="248" cy="148" r="1.1"/>
+        <circle cx="242" cy="156" r="1.1"/>
+      </g>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- the lamp: surya for din, chandra for raat. same grammar at 20px —
+       one heavy contour, one thin echo inside it. -->
+  <symbol id="surya" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-linecap="round">
+      <circle cx="24" cy="24" r="9" stroke-width="2.4"/>
+      <circle cx="24" cy="24" r="5.5" stroke-width="1" opacity=".7"/>
+      <circle cx="24" cy="24" r="1.6" fill="currentColor" stroke="none"/>
+      <g stroke-width="2">
+        <path d="M24 8 L24 3"/><path d="M24 40 L24 45"/>
+        <path d="M8 24 L3 24"/><path d="M40 24 L45 24"/>
+        <path d="M12.7 12.7 L9.2 9.2"/><path d="M35.3 35.3 L38.8 38.8"/>
+        <path d="M12.7 35.3 L9.2 38.8"/><path d="M35.3 12.7 L38.8 9.2"/>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="chandra" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 6 a12 12 0 0 0 18 18 a18 18 0 1 1 -18 -18Z" stroke-width="2.4"/>
+      <path d="M24 6 a12 12 0 0 0 18 18 a18 18 0 1 1 -18 -18Z"
+            transform="translate(20 28) scale(.72) translate(-20 -28)"
+            stroke-width="1.2" opacity=".7"/>
+      <circle cx="34" cy="11" r="1.5" fill="currentColor" stroke="none"/>
+      <circle cx="40" cy="19" r="1.1" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+
+  <!-- social glyphs, drawn in the same line grammar. 18px, contour only. -->
+  <symbol id="ic-x" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M5.5 5.5 L18.5 18.5"/>
+      <path d="M18.5 5.5 L5.5 18.5"/>
+    </g>
+  </symbol>
+  <symbol id="ic-li" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="4"/>
+      <circle cx="8.2" cy="8.4" r="1.1" fill="currentColor" stroke="none"/>
+      <path d="M8.2 11.5 L8.2 16.8"/>
+      <path d="M12.4 16.8 L12.4 11.2 M12.4 13 C13.2 11 16.4 11.2 16.4 13.8 L16.4 16.8"/>
+    </g>
+  </symbol>
+  <symbol id="ic-gh" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="7" cy="6" r="2.6"/>
+      <circle cx="7" cy="18" r="2.6"/>
+      <circle cx="17.5" cy="8" r="2.6"/>
+      <path d="M7 8.6 L7 15.4"/>
+      <path d="M7 13.5 C7 11 12 11.5 17.5 10.6"/>
+    </g>
+  </symbol>
+  <symbol id="ic-note" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8.5" cy="17.5" r="2.8"/>
+      <path d="M11.3 17.5 L11.3 5.5 C14 6.5 16.2 7.6 16.8 10"/>
+    </g>
+  </symbol>
+
+  <symbol id="bloom-mini" viewBox="0 0 120 120">
+    <g fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round">
+      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z"/>
+      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(60 60 60)"/>
+      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(120 60 60)"/>
+      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(180 60 60)"/>
+      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(240 60 60)"/>
+      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(300 60 60)"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="mark" href="/">RITIK</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/blogs/"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>blogs</a>
+      <a href="/projects/"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>projects</a>
+      <a href="/music/"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>music</a>
+      <a href="/books/" aria-current="page"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>books</a>
+    </nav>
+    <button class="lamp" id="lamp" type="button" aria-label="Switch to raat — dark">
+      <svg class="moon" viewBox="0 0 48 48" aria-hidden="true"><use href="#chandra"/></svg>
+      <svg class="sun" viewBox="0 0 48 48" aria-hidden="true"><use href="#surya"/></svg>
+    </button>
+  </div>
+</header>
+
+
+<main class="page" id="main">
+<section class="page-top">
+  <div class="head">
+    <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+    <h1>Books</h1>
+  </div>
+  <!-- SWAP 1: one sentence. this is the page's whole first impression. -->
+  <p class="page-lede">The shelf, and the ones I have gone back to.</p>
+</section>
+<div class="rule" aria-hidden="true"><svg class="bloom"><use href="#bloom-mini"/></svg></div>
+
+<section data-reveal>
+  <div class="m-rep">
+    <div>
+      <!-- the tome. the record's sibling: ink body, geru medallion,
+           paper lotus, and the ribbon where the reading stopped. -->
+      <div class="tome">
+        <svg viewBox="0 0 240 240" fill="none" aria-hidden="true">
+          <rect x="40" y="24" width="176" height="200" rx="7" fill="var(--paper-3)"/>
+          <g stroke="var(--ink-3)" stroke-width="1" opacity=".45">
+            <path d="M211 36 L211 212"/>
+            <path d="M214 44 L214 204"/>
+            <path d="M54 221 L206 221"/>
+          </g>
+          <rect x="26" y="16" width="182" height="202" rx="6" fill="var(--ink)" opacity=".92"/>
+          <path d="M52 16 L52 218" stroke="var(--paper)" stroke-width="2" opacity=".25"/>
+          <path d="M58 16 L58 218" stroke="var(--paper)" stroke-width="1" opacity=".16"/>
+          <g stroke="var(--paper)" opacity=".16">
+            <rect x="70" y="30" width="124" height="174" rx="3" stroke-width="1.6"/>
+            <rect x="76" y="36" width="112" height="162" rx="2" stroke-width="1"/>
+          </g>
+          <circle cx="132" cy="117" r="47" stroke="var(--paper)" stroke-width="1" opacity=".16"/>
+          <circle cx="132" cy="117" r="40" fill="var(--geru)"/>
+          <g style="color:var(--paper)" opacity=".85">
+            <svg x="110" y="95" width="44" height="44" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+          </g>
+          <path d="M164 16 L180 16 L180 64 L172 55 L164 64Z" fill="var(--geru)"/>
+        </svg>
+      </div>
+      <!-- SWAP 2: what you are actually reading right now. -->
+      <div class="discmeta">
+        <p class="tg">Reading now</p>
+        <span class="w">Seeing Like a State</span><br>
+        <span class="r">James C. Scott</span>
+      </div>
+    </div>
+
+    <div>
+      <!-- SWAP 3: why this book is in your hands. one or two sentences. -->
+      <p class="saynow">About what governments break when they insist on legibility.
+        Half of it describes every dashboard I have shipped.</p>
+
+      <!-- SWAP 4: your shelf. add class="loved" to any book that gets the lotus.
+           these came over from the lab as placeholders — confirm or replace all. -->
+      <div class="shelf">
+        <div class="bk loved"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+          <span><span class="t">Raag Darbari</span><br><span class="a">Shrilal Shukla</span></span></div>
+        <div class="bk"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+          <span><span class="t">Maila Anchal</span><br><span class="a">Phanishwar Nath Renu</span></span></div>
+        <div class="bk loved"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+          <span><span class="t">Godan</span><br><span class="a">Munshi Premchand</span></span></div>
+        <div class="bk"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+          <span><span class="t">Thinking in Systems</span><br><span class="a">Donella Meadows</span></span></div>
+        <div class="bk"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+          <span><span class="t">The Argumentative Indian</span><br><span class="a">Amartya Sen</span></span></div>
+        <div class="bk loved"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+          <span><span class="t">The Design of Everyday Things</span><br><span class="a">Don Norman</span></span></div>
+      </div>
+      <p class="shelfnote">
+        <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+        marks the ones I have gone back to.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="page foot-in">
+    <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+    <span>Made in Bihar.</span>
+    <span class="icons">
+      <a href="https://x.com/ritikshub" rel="me noopener" aria-label="Ritik on X"><svg><use href="#ic-x"/></svg></a>
+      <a href="https://www.linkedin.com/in/ritik-r-75a7461b6/" rel="me noopener" aria-label="Ritik on LinkedIn"><svg><use href="#ic-li"/></svg></a>
+      <a href="https://github.com/ritikshub" rel="me noopener" aria-label="Ritik on GitHub"><svg><use href="#ic-gh"/></svg></a>
+    </span>
+    <span class="r num">2026</span>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
