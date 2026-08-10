@@ -160,6 +160,29 @@ main{ flex:1 0 auto; }
 .page-top + .rule{ margin:var(--sp-lg) 0 var(--sp-2xl); }
 .page-note{ color:var(--ink-2); max-width:60ch; margin-bottom:var(--sp-2xl); }
 
+/* ----------------------------------------------------------
+   THE PANELS — every page hangs one painting. home has the
+   raja; the inner pages have their own, smaller, on the same
+   nail. text left, painting right, stacked on a phone.
+   ---------------------------------------------------------- */
+.top-split{ display:grid; gap:var(--sp-xl); align-items:center; }
+@media (min-width:820px){
+  .top-split{ grid-template-columns:1fr 262px; gap:var(--sp-3xl); }
+}
+.top-art{ justify-self:center; position:relative; }
+.top-art .panel{
+  width:min(252px,66vw); height:auto; color:var(--geru); display:block;
+}
+/* the same nail and the same unsettled hang as the hero, one
+   beat slower so two paintings never swing in step. */
+.top-art::before{
+  content:''; position:absolute; z-index:1;
+  top:calc(1.7% - 3px); left:50%; margin-left:-3px;
+  width:6px; height:6px; border-radius:50%; background:var(--ink);
+}
+.top-art .panel{ transform-origin:50% 1.7%; animation:sway 9.4s ease-in-out infinite; }
+.top-art{ animation:open 1.1s var(--quint) both .2s; }
+
 /* sections fade up once, then get out of the way.
    gated on .reveal-ready so a missing script can never hide the page. */
 .reveal-ready [data-reveal]{ opacity:0; transform:translateY(16px); }
@@ -171,9 +194,22 @@ main{ flex:1 0 auto; }
 /* ----------------------------------------------------------
    HERO — A · Split
    ---------------------------------------------------------- */
-.hero{ padding:clamp(56px,9vw,104px) 0 0; }
-.h-split{ display:grid; gap:var(--sp-2xl); align-items:center; }
-@media (min-width:860px){ .h-split{ grid-template-columns:1.45fr 1fr; gap:var(--sp-4xl); } }
+.hero{
+  padding:clamp(48px,7vw,76px) 0 0;
+}
+
+.h-split{
+  display:grid;
+  gap:var(--sp-2xl);
+  align-items:center;
+}
+
+@media (min-width:860px){
+  .h-split{
+    grid-template-columns:1.45fr 1fr;
+    gap:clamp(48px,6vw,76px);
+  }
+}
 .nm{
   font-family:"Eczar",serif; font-weight:600; line-height:.95; letter-spacing:-.015em;
   font-size:clamp(2.8rem,7vw,4.6rem); margin-bottom:var(--sp-md);
@@ -192,10 +228,26 @@ main{ flex:1 0 auto; }
 .links a{ position:relative; text-decoration:none; font-size:.9rem; font-weight:500;
   padding-bottom:3px; transition:color var(--fast); }
 .links a::after{
-  content:''; position:absolute; left:0; right:0; bottom:0; height:5px;
-  border-top:1px solid var(--hair); border-bottom:1px solid var(--hair);
-  background:repeating-linear-gradient(45deg,var(--hair) 0 1px,transparent 1px 6px);
-  transform:scaleX(0); transform-origin:left; transition:transform var(--mid) var(--quint);
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:5px;
+
+  border-top:1px solid var(--geru-2);
+  border-bottom:1px solid var(--geru-2);
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--geru) 0 1px,
+      transparent 1px 6px
+    );
+
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform var(--mid) var(--quint);
 }
 .links a:hover{ color:var(--geru); }
 .links a:hover::after{ transform:scaleX(1); }
@@ -255,8 +307,17 @@ main{ flex:1 0 auto; }
 .w-row p{ font-size:.88rem; color:var(--ink-3); max-width:58ch; }
 .w-row .go{ align-self:center; color:var(--ink-3);
   transition:transform var(--mid) var(--quint), color var(--fast); }
-.w-row:hover h3{ color:var(--geru); }
-.w-row:hover .go{ transform:translateX(5px); color:var(--geru); }
+a.w-row:hover h3{ color:var(--geru); }
+a.w-row:hover .go{ transform:translateX(5px); color:var(--geru); }
+
+/* a post that is titled but not written yet. it sits in the list
+   because the list is the plan, but it does not pretend to be a link. */
+.w-row.draft h3,.w-row.draft p{ color:var(--ink-3); }
+.w-row .soon{
+  align-self:center; font-size:.66rem; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-3); white-space:nowrap;
+  border:1px solid var(--hair); border-radius:2px; padding:2px 7px;
+}
 .w-year{
   font-family:"Eczar",serif; font-weight:500; font-size:1.1rem; color:var(--ink-3);
   margin:var(--sp-2xl) 0 var(--sp-sm); font-variant-numeric:tabular-nums;
@@ -291,9 +352,11 @@ main{ flex:1 0 auto; }
   align-items:baseline; padding:var(--sp-sm) 0; border-top:1px solid var(--hair-2);
 }
 .tl-row:last-child{ border-bottom:1px solid var(--hair-2); }
+/* baseline, not center: the row is as tall as the paragraph beside it,
+   so centring drops the lotus further with every extra line it wraps. */
 .tl-row .bloom{
   width:7px; height:7px; color:var(--ink-3); opacity:.75;
-  align-self:center; transform:translateY(-1px);
+  align-self:baseline; transform:translateY(-1px);
 }
 .tl-row.now .bloom{ color:var(--geru); opacity:1; }
 .tl-row .when{
@@ -332,43 +395,6 @@ main{ flex:1 0 auto; }
 .p-cell .yr{ float:right; font-size:.74rem; color:var(--ink-3);
   font-variant-numeric:tabular-nums; }
 .p-cell:hover h3{ color:var(--geru); }
-
-/* ----------------------------------------------------------
-   SPLIT + TOME — the two-column spread and its caption block,
-   used by the books page.
-   ---------------------------------------------------------- */
-.m-rep{ display:grid; gap:var(--sp-2xl); }
-@media (min-width:820px){ .m-rep{ grid-template-columns:300px 1fr; gap:var(--sp-4xl); } }
-.discmeta{ text-align:center; margin-top:var(--sp-md); }
-.discmeta .tg{ font-size:.7rem; font-weight:600; letter-spacing:.17em;
-  text-transform:uppercase; color:var(--geru); margin-bottom:var(--sp-2xs); }
-.discmeta .w{ font-family:"Eczar",serif; font-weight:500; font-size:1.2rem; }
-.discmeta .r{ font-size:.84rem; color:var(--ink-3); }
-
-/* the tome — the drawn book on the shelf spread */
-.tome{ width:min(235px,62vw); margin:0 auto; }
-.tome svg{ width:100%; height:auto; display:block; }
-.saynow{ font-size:.95rem; color:var(--ink-2); max-width:56ch; margin-bottom:var(--sp-xl); }
-/* inside the split the shelf never goes past two columns */
-@media (min-width:1040px){ .m-rep .shelf{ grid-template-columns:1fr 1fr; } }
-
-/* ----------------------------------------------------------
-   BOOKS — A · Shelf list
-   ---------------------------------------------------------- */
-.shelf{ display:grid; gap:0 var(--sp-3xl); }
-@media (min-width:680px){ .shelf{ grid-template-columns:1fr 1fr; } }
-@media (min-width:1040px){ .shelf{ grid-template-columns:1fr 1fr 1fr; } }
-.bk{
-  display:grid; grid-template-columns:14px 1fr; gap:var(--sp-sm); align-items:baseline;
-  padding:var(--sp-sm) 0; border-bottom:1px solid var(--hair-2);
-}
-.bk .bloom{ width:7px; height:7px; transform:translateY(-2px); opacity:0; }
-.bk.loved .bloom{ opacity:1; }
-.bk .t{ font-family:"Eczar",serif; font-weight:500; font-size:.99rem; line-height:1.34; }
-.bk .a{ font-size:.8rem; color:var(--ink-3); }
-.shelfnote{ margin-top:var(--sp-lg); font-size:.76rem; color:var(--ink-3);
-  display:flex; align-items:center; gap:6px; }
-.shelfnote .bloom{ width:7px; height:7px; }
 
 /* ----------------------------------------------------------
    FOOT — on every page

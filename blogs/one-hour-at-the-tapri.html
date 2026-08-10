@@ -338,6 +338,415 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
       <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(300 60 60)"/>
     </g>
   </symbol>
+  <!-- ============================================================
+       #leaf — the lens leaf. the unit the rest is built from.
+       ============================================================ -->
+  <symbol id="leaf" viewBox="0 0 40 22">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round">
+      <path d="M2 11 C10 1 28 -1 38 5 C30 17 12 21 2 11Z" fill="url(#hatch)" stroke-width="2"/>
+      <path d="M4 11 C12 4 26 3 34 6" stroke-width="1" opacity=".7"/>
+      <path d="M2 11 L38 5" stroke-width="1.2"/>
+    </g>
+  </symbol>
+
+  <!-- ============================================================
+       #kamal — the full kohbar lotus. #bloom-mini is this one
+       simplified for 15px; this is the one that survives being big.
+       eight outer petals, eight inner, a stippled seed cup.
+       ============================================================ -->
+  <symbol id="kamal" viewBox="0 0 120 120">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round">
+      <g stroke-width="2.4">
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(45 60 60)"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(90 60 60)"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(135 60 60)"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(180 60 60)"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(225 60 60)"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(270 60 60)"/>
+        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(315 60 60)"/>
+      </g>
+      <g stroke-width="1" opacity=".7">
+        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z"/>
+        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(90 60 60)"/>
+        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(180 60 60)"/>
+        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(270 60 60)"/>
+      </g>
+      <g stroke-width="1.8">
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(22.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(67.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(112.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(157.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(202.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(247.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(292.5 60 60)"/>
+        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(337.5 60 60)"/>
+      </g>
+      <circle cx="60" cy="60" r="11" style="fill:var(--paper)" stroke-width="2.2"/>
+      <circle cx="60" cy="60" r="7" stroke-width="1" opacity=".7"/>
+      <g fill="currentColor" stroke="none">
+        <circle cx="60" cy="55" r="1.5"/><circle cx="64" cy="61" r="1.5"/>
+        <circle cx="56" cy="61" r="1.5"/><circle cx="60" cy="65" r="1.5"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- ============================================================
+       #matsya-one — the fish, facing left. Mithila's luck sign.
+       stark paper head cut by a gill band, then the body carried
+       nose-to-tail in horizontal texture bands: hatch, scallop
+       scales, dot rows. one huge lashed eye. ray-lined fins.
+       ============================================================ -->
+  <symbol id="matsya-one" viewBox="0 0 300 130">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+
+      <!-- tail first, the body crops it -->
+      <path d="M196 65 C214 58 232 52 244 42 L278 14 C284 9 291 14 288 21
+               L271 62 C270 65 270 65 271 68 L288 109 C291 116 284 121 278 116
+               L244 88 C232 78 214 72 196 65Z" fill="url(#hatch)" stroke-width="2.4"/>
+      <g stroke-width="1.1" opacity=".75">
+        <path d="M204 61 C228 51 252 39 274 21"/>
+        <path d="M204 69 C228 79 252 91 274 109"/>
+        <path d="M202 64 L264 45"/><path d="M202 67 L264 85"/>
+      </g>
+
+      <!-- dorsal and belly fins, ray-lined, behind the body -->
+      <path d="M96 26 C118 6 150 0 172 10 L168 30 C146 20 118 20 96 26Z"
+            fill="url(#hatch)" stroke-width="2.2"/>
+      <g stroke-width="1.1" opacity=".8">
+        <path d="M108 22 L112 7"/><path d="M126 18 L129 3"/>
+        <path d="M144 17 L148 4"/><path d="M160 20 L164 8"/>
+      </g>
+      <path d="M104 104 C124 124 152 128 168 119 L162 101 C144 110 122 110 104 104Z"
+            fill="url(#hatch)" stroke-width="2.2"/>
+      <g stroke-width="1.1" opacity=".8">
+        <path d="M118 108 L122 122"/><path d="M136 111 L140 125"/><path d="M152 110 L157 122"/>
+      </g>
+
+      <!-- the body lens, paper so head stays stark and tail crops -->
+      <path d="M14 65 C40 30 96 16 142 20 C178 23 200 42 206 65
+               C200 88 178 107 142 110 C96 114 40 100 14 65Z"
+            style="fill:var(--paper)" stroke-width="2.6"/>
+
+      <!-- the four band dividers, each doubled -->
+      <g stroke-width="1.6">
+        <path d="M68 40 C96 32 120 31 142 34 C168 38 190 47 200 56"/>
+        <path d="M68 57 C96 51 120 50 142 53 C170 56 192 59 203 62"/>
+        <path d="M68 75 C96 72 120 72 142 75 C170 77 192 73 203 69"/>
+        <path d="M68 92 C96 91 120 91 142 94 C168 92 190 83 200 76"/>
+      </g>
+
+      <!-- band 2 and band 4 flooded with hatch -->
+      <path d="M68 40 C96 32 120 31 142 34 C168 38 190 47 200 56
+               L203 62 C192 59 170 56 142 53 C120 50 96 51 68 57Z"
+            fill="url(#hatch)" stroke="none"/>
+      <path d="M68 75 C96 72 120 72 142 75 C170 77 192 73 203 69
+               L200 76 C190 83 168 92 142 94 C120 91 96 91 68 92Z"
+            fill="url(#hatch)" stroke="none"/>
+
+      <!-- band 3, the widest, carries the scallop scales -->
+      <g stroke-width="1.3" opacity=".9">
+        <path d="M74 62 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0
+                 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0"/>
+      </g>
+
+      <!-- bands 1 and 5, the dot rows against the contour -->
+      <g fill="currentColor" stroke="none">
+        <circle cx="84" cy="30" r="1.4"/><circle cx="104" cy="26" r="1.4"/>
+        <circle cx="124" cy="24" r="1.4"/><circle cx="144" cy="25" r="1.4"/>
+        <circle cx="164" cy="30" r="1.4"/><circle cx="182" cy="38" r="1.4"/>
+        <circle cx="84" cy="99" r="1.4"/><circle cx="104" cy="103" r="1.4"/>
+        <circle cx="124" cy="105" r="1.4"/><circle cx="144" cy="104" r="1.4"/>
+        <circle cx="164" cy="99" r="1.4"/><circle cx="182" cy="90" r="1.4"/>
+      </g>
+
+      <!-- the gill band: two heavy arcs, the ticks between them -->
+      <path d="M66 27 C52 44 50 86 64 103" stroke-width="2.4"/>
+      <path d="M76 31 C64 46 62 84 74 99" stroke-width="1.6"/>
+      <g stroke-width="1" opacity=".75">
+        <path d="M60 44 L70 46"/><path d="M58 56 L68 57"/>
+        <path d="M58 70 L68 70"/><path d="M60 84 L70 82"/>
+      </g>
+
+      <!-- the one huge fish eye, lashed -->
+      <circle cx="44" cy="61" r="10" style="fill:var(--paper)" stroke-width="2.2"/>
+      <circle cx="44" cy="61" r="5.4" stroke-width="1" opacity=".7"/>
+      <circle cx="44" cy="61" r="2.8" fill="currentColor" stroke="none"/>
+      <g stroke-width="1.3">
+        <path d="M37 52 L34 46"/><path d="M44 50 L44 44"/><path d="M51 52 L54 46"/>
+      </g>
+
+      <!-- mouth and the stipple of the stark head -->
+      <path d="M16 70 C24 76 34 78 42 76" stroke-width="1.6"/>
+      <g fill="currentColor" stroke="none">
+        <circle cx="30" cy="86" r="1.4"/><circle cx="44" cy="88" r="1.4"/>
+        <circle cx="32" cy="46" r="1.4"/><circle cx="52" cy="38" r="1.4"/>
+      </g>
+
+      <!-- pectoral fin lying across the bands -->
+      <path d="M84 76 C96 94 112 102 122 98 C116 84 102 74 84 76Z"
+            style="fill:var(--paper)" stroke-width="2.2"/>
+      <g stroke-width="1.1" opacity=".8">
+        <path d="M90 79 C100 90 110 96 118 96"/>
+        <path d="M96 76 C104 86 112 92 120 94"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- ============================================================
+       #bans — one bamboo stalk. in kohbar the bamboo is the male
+       half, the lineage: it grows straight, joints and all.
+       segmented, noded, a leaf blade off every joint.
+       ============================================================ -->
+  <symbol id="bans" viewBox="0 0 100 200">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M42 200 L42 16 C42 9 46 5 50 5 C54 5 58 9 58 16 L58 200Z"
+            fill="url(#hatch)" stroke-width="2.4"/>
+      <path d="M46 196 L46 18" stroke-width="1" opacity=".7"/>
+
+      <g stroke-width="2.2">
+        <path d="M41 44 L59 44"/><path d="M41 88 L59 88"/>
+        <path d="M41 132 L59 132"/><path d="M41 176 L59 176"/>
+      </g>
+      <g stroke-width="1" opacity=".7">
+        <path d="M42 49 L58 49"/><path d="M42 93 L58 93"/>
+        <path d="M42 137 L58 137"/><path d="M42 181 L58 181"/>
+      </g>
+
+      <!-- blades off each joint, alternating long and short -->
+      <g stroke-width="1.9">
+        <path d="M42 44 C28 41 14 32 4 19 C17 22 32 29 41 37Z" fill="url(#hatch)"/>
+        <path d="M58 44 C72 41 86 32 96 19 C83 22 68 29 59 37Z" fill="url(#hatch)"/>
+        <path d="M42 88 C30 86 19 79 11 69 C22 71 34 76 41 82Z" fill="url(#hatch)"/>
+        <path d="M58 88 C70 86 81 79 89 69 C78 71 66 76 59 82Z" fill="url(#hatch)"/>
+        <path d="M42 132 C28 129 14 120 4 107 C17 110 32 117 41 125Z" fill="url(#hatch)"/>
+        <path d="M58 132 C72 129 86 120 96 107 C83 110 68 117 59 125Z" fill="url(#hatch)"/>
+      </g>
+      <g stroke-width="1" opacity=".7">
+        <path d="M40 41 C28 37 16 29 8 21"/><path d="M60 41 C72 37 84 29 92 21"/>
+        <path d="M40 129 C28 125 16 117 8 109"/><path d="M60 129 C72 125 84 117 92 109"/>
+      </g>
+
+      <!-- stipple down the alternate segments -->
+      <g fill="currentColor" stroke="none">
+        <circle cx="50" cy="60" r="1.3"/><circle cx="50" cy="70" r="1.3"/>
+        <circle cx="50" cy="148" r="1.3"/><circle cx="50" cy="158" r="1.3"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- ============================================================
+       #suga — the parrot, facing right. the love-bird of the
+       kohbar panel. ring neck, hooked beak, chevron wing.
+       ============================================================ -->
+  <symbol id="suga" viewBox="0 0 130 150">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M46 94 C38 112 26 128 8 140 C18 145 32 141 44 131
+               C54 123 60 111 62 100Z" fill="url(#hatch)" stroke-width="2.2"/>
+      <g stroke-width="1.1" opacity=".75">
+        <path d="M48 100 C38 116 26 128 14 137"/>
+        <path d="M54 104 C46 118 36 130 26 137"/>
+      </g>
+
+      <path d="M40 60 C44 36 66 22 86 30 C104 38 110 62 102 82
+               C94 102 70 110 54 100 C42 92 37 76 40 60Z"
+            style="fill:var(--paper)" stroke-width="2.6"/>
+      <path d="M47 62 C50 43 68 31 85 37" stroke-width="1" opacity=".7"/>
+
+      <path d="M56 58 C72 52 90 60 96 76 C88 92 68 96 56 86
+               C50 78 50 66 56 58Z" fill="url(#hatch)" stroke-width="2.2"/>
+      <g stroke-width="1.2" opacity=".85">
+        <path d="M59 66 C68 61 81 63 88 71"/>
+        <path d="M57 76 C66 71 79 73 88 81"/>
+        <path d="M58 85 C66 81 76 82 84 88"/>
+      </g>
+
+      <path d="M74 20 C90 18 102 28 102 42 C102 52 96 60 86 62
+               C74 64 66 56 66 44 C66 30 66 22 74 20Z"
+            style="fill:var(--paper)" stroke-width="2.4"/>
+      <path d="M64 50 C74 56 86 56 94 50" stroke-width="2"/>
+      <path d="M64 55 C74 61 86 61 94 55" stroke-width="1" opacity=".7"/>
+      <path d="M100 32 C112 32 120 40 118 50 C112 56 102 54 98 46Z"
+            style="fill:var(--paper)" stroke-width="2.2"/>
+      <path d="M104 38 C112 38 116 43 115 48" stroke-width="1" opacity=".7"/>
+      <path d="M100 46 C106 50 112 50 116 47" stroke-width="1.3"/>
+
+      <circle cx="88" cy="38" r="6.5" stroke-width="1.9"/>
+      <circle cx="88" cy="38" r="3.2" stroke-width="1" opacity=".7"/>
+      <circle cx="88" cy="38" r="1.8" fill="currentColor" stroke="none"/>
+
+      <g stroke-width="1.5">
+        <path d="M76 19 C74 12 76 6 82 3"/>
+        <path d="M84 18 C84 11 88 5 94 4"/>
+      </g>
+      <g stroke-width="1.8">
+        <path d="M66 100 L64 114"/><path d="M64 114 L56 120"/><path d="M64 114 L70 121"/>
+        <path d="M84 102 L84 116"/><path d="M84 116 L76 122"/><path d="M84 116 L91 122"/>
+      </g>
+      <g fill="currentColor" stroke="none">
+        <circle cx="48" cy="74" r="1.3"/><circle cx="46" cy="84" r="1.3"/>
+        <circle cx="54" cy="92" r="1.3"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- ============================================================
+       #matsya — the pond panel. the twin fish crossing, water
+       above and below, and no field left bare: lotus, buds,
+       reeds, leaves, stipple.
+       ============================================================ -->
+  <symbol id="matsya" viewBox="0 0 340 300">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
+      <rect x="5" y="5" width="330" height="290" stroke-width="2.2"/>
+      <rect x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
+      <g stroke-width="1.3">
+        <circle cx="9" cy="9" r="2.6"/><circle cx="331" cy="9" r="2.6"/>
+        <circle cx="9" cy="291" r="2.6"/><circle cx="331" cy="291" r="2.6"/>
+      </g>
+
+      <!-- water at the surface and again at the floor -->
+      <g opacity=".85">
+        <path d="M22 34 C50 24 76 44 104 34 C132 24 158 44 186 34
+                 C214 24 242 44 270 34 C292 26 306 32 318 38" stroke-width="1.6"/>
+        <path d="M22 41 C50 31 76 51 104 41 C132 31 158 51 186 41
+                 C214 31 242 51 270 41 C292 33 306 39 318 45" stroke-width="1" opacity=".7"/>
+        <path d="M22 268 C50 258 76 278 104 268 C132 258 158 278 186 268
+                 C214 258 242 278 270 268 C292 260 306 266 318 272" stroke-width="1.6"/>
+        <path d="M22 275 C50 265 76 285 104 275 C132 265 158 285 186 275
+                 C214 265 242 285 270 275 C292 267 306 273 318 279" stroke-width="1" opacity=".7"/>
+      </g>
+
+      <!-- the twin fish, crossing on the diagonal -->
+      <svg x="16" y="56" width="196" height="85" viewBox="0 0 300 130"><use href="#matsya-one"/></svg>
+      <g transform="translate(340 0) scale(-1 1)">
+        <svg x="12" y="158" width="196" height="85" viewBox="0 0 300 130"><use href="#matsya-one"/></svg>
+      </g>
+
+      <!-- the lotus rises on a stem from the floor. a bloom with no
+           stem reads as a star sticker, not a plant. -->
+      <svg x="244" y="56" width="56" height="56" viewBox="0 0 120 120"><use href="#kamal"/></svg>
+      <!-- the stem stops above the lower fish. it used to run through
+           its head, which read as a wire across the panel. -->
+      <path d="M272 112 C271 126 273 140 279 152" stroke-width="1.8"/>
+      <path d="M277 113 C276 126 278 138 283 150" stroke-width="1" opacity=".7"/>
+
+      <svg x="30" y="168" width="32" height="32" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+      <path d="M46 200 C48 226 58 248 70 266" stroke-width="1.8"/>
+      <path d="M51 199 C53 224 62 244 74 262" stroke-width="1" opacity=".7"/>
+
+      <g transform="translate(268 238) rotate(-16)"><use href="#leaf" width="42" height="23"/></g>
+      <g transform="translate(206 252) rotate(12)"><use href="#leaf" width="36" height="20"/></g>
+      <g transform="translate(30 118) rotate(-10)"><use href="#leaf" width="34" height="19"/></g>
+      <g transform="translate(24 216) rotate(-24)"><use href="#leaf" width="34" height="19"/></g>
+      <g transform="translate(140 250) rotate(8)"><use href="#leaf" width="38" height="21"/></g>
+      <g transform="translate(96 176) rotate(-30)"><use href="#leaf" width="30" height="17"/></g>
+
+      <!-- reeds off the floor -->
+      <g stroke-width="1.6" opacity=".9">
+        <path d="M92 266 C90 244 94 224 104 210"/>
+        <path d="M104 266 C104 246 110 228 120 216"/>
+        <path d="M98 240 C90 238 85 231 85 224"/>
+        <path d="M110 244 C118 241 122 234 121 227"/>
+        <path d="M150 268 C149 252 153 238 160 228"/>
+        <path d="M156 246 C149 244 145 238 146 232"/>
+        <path d="M186 270 C186 254 190 240 198 230"/>
+        <path d="M192 248 C186 246 182 240 183 234"/>
+      </g>
+
+      <!-- stipple: no field left unlucky -->
+      <g fill="currentColor" stroke="none" opacity=".9">
+        <circle cx="42" cy="238" r="1.5"/><circle cx="58" cy="248" r="1.5"/>
+        <circle cx="38" cy="256" r="1.5"/><circle cx="70" cy="230" r="1.5"/>
+        <circle cx="66" cy="196" r="1.5"/><circle cx="80" cy="186" r="1.5"/>
+        <circle cx="76" cy="204" r="1.5"/>
+        <circle cx="306" cy="128" r="1.5"/><circle cx="294" cy="144" r="1.5"/>
+        <circle cx="310" cy="158" r="1.5"/><circle cx="292" cy="116" r="1.5"/>
+        <circle cx="304" cy="172" r="1.5"/>
+        <circle cx="196" cy="284" r="1.5"/><circle cx="212" cy="278" r="1.5"/>
+        <circle cx="66" cy="52" r="1.5"/><circle cx="52" cy="62" r="1.5"/>
+        <circle cx="128" cy="196" r="1.5"/><circle cx="118" cy="186" r="1.5"/>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- ============================================================
+       #kohbar — the wedding-chamber panel proper: the bamboo
+       (the line, the lineage) standing in the lotus pond, two
+       parrots facing across it, fish in the water below.
+       ============================================================ -->
+  <symbol id="kohbar" viewBox="0 0 340 300">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
+      <rect x="5" y="5" width="330" height="290" stroke-width="2.2"/>
+      <rect x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
+      <g stroke-width="1.3">
+        <circle cx="9" cy="9" r="2.6"/><circle cx="331" cy="9" r="2.6"/>
+        <circle cx="9" cy="291" r="2.6"/><circle cx="331" cy="291" r="2.6"/>
+      </g>
+
+      <!-- the grove: one tall stalk centred, two shorter flanking.
+           all three stand in the water, none floats above it. -->
+      <svg x="126" y="62" width="88" height="200" viewBox="0 0 100 200"><use href="#bans"/></svg>
+      <svg x="56" y="118" width="72" height="144" viewBox="0 0 100 200"><use href="#bans"/></svg>
+      <svg x="212" y="118" width="72" height="144" viewBox="0 0 100 200"><use href="#bans"/></svg>
+
+      <!-- the lotus crowning the centre stalk -->
+      <svg x="140" y="20" width="60" height="60" viewBox="0 0 120 120"><use href="#kamal"/></svg>
+      <svg x="66" y="86" width="26" height="26" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+      <svg x="248" y="86" width="26" height="26" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+
+      <!-- the two parrots, facing each other across the lineage -->
+      <svg x="42" y="150" width="74" height="85" viewBox="0 0 130 150"><use href="#suga"/></svg>
+      <g transform="translate(340 0) scale(-1 1)">
+        <svg x="42" y="150" width="74" height="85" viewBox="0 0 130 150"><use href="#suga"/></svg>
+      </g>
+
+      <!-- the pond the grove stands in -->
+      <g opacity=".85">
+        <path d="M22 250 C50 240 76 260 104 250 C132 240 158 260 186 250
+                 C214 240 242 260 270 250 C292 242 306 248 318 254" stroke-width="1.6"/>
+        <path d="M22 257 C50 247 76 267 104 257 C132 247 158 267 186 257
+                 C214 247 242 267 270 257 C292 249 306 255 318 261" stroke-width="1" opacity=".7"/>
+      </g>
+      <svg x="120" y="242" width="100" height="43" viewBox="0 0 300 130"><use href="#matsya-one"/></svg>
+
+      <!-- sun and moon in the upper corners: din and raat, both -->
+      <g opacity=".9">
+        <circle cx="46" cy="44" r="9" stroke-width="2"/>
+        <circle cx="46" cy="44" r="5" stroke-width="1" opacity=".7"/>
+        <g stroke-width="1.3">
+          <path d="M46 31 L46 26"/><path d="M46 57 L46 62"/>
+          <path d="M33 44 L28 44"/><path d="M59 44 L64 44"/>
+          <path d="M37 35 L33 31"/><path d="M55 53 L59 57"/>
+          <path d="M37 53 L33 57"/><path d="M55 35 L59 31"/>
+        </g>
+      </g>
+      <path d="M288 32 a10 10 0 0 0 15 15 a15 15 0 1 1 -15 -15Z" stroke-width="2" opacity=".9"/>
+      <g fill="currentColor" stroke="none" opacity=".9">
+        <circle cx="300" cy="28" r="1.4"/><circle cx="310" cy="38" r="1.4"/>
+        <circle cx="36" cy="66" r="1.4"/><circle cx="58" cy="68" r="1.4"/>
+        <circle cx="30" cy="206" r="1.5"/><circle cx="24" cy="222" r="1.5"/>
+        <circle cx="38" cy="236" r="1.5"/><circle cx="26" cy="190" r="1.5"/>
+        <circle cx="312" cy="206" r="1.5"/><circle cx="318" cy="222" r="1.5"/>
+        <circle cx="304" cy="236" r="1.5"/><circle cx="316" cy="190" r="1.5"/>
+        <circle cx="166" cy="284" r="1.5"/><circle cx="252" cy="278" r="1.5"/>
+        <circle cx="86" cy="278" r="1.5"/>
+        <circle cx="112" cy="86" r="1.5"/><circle cx="228" cy="86" r="1.5"/>
+        <circle cx="150" cy="108" r="1.5"/><circle cx="192" cy="108" r="1.5"/>
+      </g>
+
+      <!-- leaves banked against the side borders so no field is bare -->
+      <g transform="translate(22 262) rotate(-8)"><use href="#leaf" width="34" height="19"/></g>
+      <g transform="translate(274 268) rotate(10)"><use href="#leaf" width="34" height="19"/></g>
+      <g transform="translate(20 146) rotate(-34)"><use href="#leaf" width="34" height="19"/></g>
+      <g transform="translate(286 150) rotate(34) scale(-1 1)"><use href="#leaf" width="34" height="19"/></g>
+      <g transform="translate(24 108) rotate(-16)"><use href="#leaf" width="28" height="16"/></g>
+      <g transform="translate(288 112) rotate(16) scale(-1 1)"><use href="#leaf" width="28" height="16"/></g>
+      <svg x="18" y="168" width="24" height="24" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+      <svg x="298" y="168" width="24" height="24" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
+    </g>
+  </symbol>
 </svg>
 
 <header class="bar">
@@ -346,7 +755,6 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
     <nav class="nav" aria-label="Sections">
       <a href="/blogs/" aria-current="page"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>blogs</a>
       <a href="/projects/"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>projects</a>
-      <a href="/books/"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>books</a>
     </nav>
     <button class="lamp" id="lamp" type="button" aria-label="Switch to raat — dark">
       <svg class="moon" viewBox="0 0 48 48" aria-hidden="true"><use href="#chandra"/></svg>
