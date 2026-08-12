@@ -89,6 +89,20 @@ ul,ol{ padding:0; list-style:none; }
   font-family:"Eczar",serif; font-weight:600; font-size:1rem;
   letter-spacing:.12em; text-decoration:none; flex:none;
 }
+/* the ghari — the day and the hour where I am, set beside the
+   wordmark like a dateline. site.js fills it and unhides it, so a
+   page without javascript shows no empty slot. */
+.ghari{
+  flex:none; display:flex; align-items:baseline; gap:5px;
+  font-size:.74rem; font-weight:500; color:var(--ink-3);
+  white-space:nowrap;
+}
+.ghari[hidden]{ display:none; }
+.ghari .dot{ color:var(--ink-3); opacity:.5; margin:0 .34em; }
+.ghari .zone{
+  font-size:.6rem; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; opacity:.62;
+}
 .nav{ display:flex; gap:2px; margin-left:auto; overflow-x:auto; scrollbar-width:none; }
 .nav::-webkit-scrollbar{ display:none; }
 .nav a{
@@ -114,6 +128,22 @@ html[data-time="raat"] .lamp .moon{ display:none; }
 html[data-time="raat"] .lamp .sun{ display:block; }
 .lamp:hover{ color:var(--geru); }
 .lamp:active{ transform:scale(.92); }
+
+/* the bar gives the ghari up one piece at a time. the row tightens
+   first, then the zone label goes, then the weekday, then the whole
+   clock — the nav must never be pushed into its own scroller, so
+   these widths are measured against the longest nav, not guessed.
+   Must sit after .nav a, which it overrides on equal specificity. */
+@media (max-width:640px){
+  .bar-in{ gap:var(--sp-sm); }
+  .nav a{ padding-left:9px; padding-right:9px; }
+}
+@media (max-width:460px){
+  .bar-in{ gap:var(--sp-xs); }
+  .ghari .zone{ display:none; }
+}
+@media (max-width:400px){ .ghari .d,.ghari .dot{ display:none; } }
+@media (max-width:359px){ .ghari{ display:none; } }
 
 /* ----------------------------------------------------------
    SHELL + SECTION GRAMMAR

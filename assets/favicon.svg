@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="A Mithila panel with the kohbar lotus">
+  <!-- ritik.wtf — the smallest painting on the site.
+       The kohbar lotus inside a double-lined Madhubani border. Tokens
+       cannot reach a standalone file, so the pigments are written out:
+       paper #f8f4ed, kajal #261d15, geru #b15026.
+       It does NOT turn with the system: a painting keeps its ground,
+       and a paper tile on a dark tab strip still reads as a painting.
+       Strokes under 1 are detail for the 180px render — at 16px only
+       the frame, the six petals and the seed cup survive, and that
+       is the whole composition. -->
+  <defs>
+    <pattern id="h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4.5" stroke="#261d15" stroke-width="1" opacity=".26"/>
+    </pattern>
+    <!-- one petal, tip up, drawn from the centre. widest at two-thirds
+         out rather than at the middle, so six of them keep six gaps
+         instead of closing into a blob when the tab shrinks it. -->
+    <path id="p" d="M32 32 C26.5 25 26 16.5 32 10.5 C38 16.5 37.5 25 32 32Z"/>
+    <path id="pe" d="M32 28.4 C29 23.6 28.8 18.2 32 14.4 C35.2 18.2 35 23.6 32 28.4Z"/>
+  </defs>
+
+  <!-- the ground -->
+  <rect width="64" height="64" rx="5" fill="#f8f4ed"/>
+
+  <!-- the border: a hatched band between two lines, rosette at each corner -->
+  <path d="M3 3H61V61H3Z M8.4 8.4V55.6H55.6V8.4Z" fill="url(#h)" fill-rule="evenodd"/>
+  <rect x="3" y="3" width="58" height="58" rx="3" fill="none" stroke="#261d15" stroke-width="2.4"/>
+  <rect x="8.4" y="8.4" width="47.2" height="47.2" fill="none" stroke="#261d15" stroke-width=".9" opacity=".7"/>
+  <g fill="none" stroke="#261d15" stroke-width=".8" opacity=".8">
+    <circle cx="5.9" cy="5.9" r="1.4"/><circle cx="58.1" cy="5.9" r="1.4"/>
+    <circle cx="5.9" cy="58.1" r="1.4"/><circle cx="58.1" cy="58.1" r="1.4"/>
+  </g>
+
+  <!-- the lotus: six petals in geru, each carrying one echo line -->
+  <g fill="#b15026">
+    <use href="#p"/>
+    <use href="#p" transform="rotate(60 32 32)"/>
+    <use href="#p" transform="rotate(120 32 32)"/>
+    <use href="#p" transform="rotate(180 32 32)"/>
+    <use href="#p" transform="rotate(240 32 32)"/>
+    <use href="#p" transform="rotate(300 32 32)"/>
+  </g>
+  <g fill="none" stroke="#f8f4ed" stroke-width=".9" opacity=".55">
+    <use href="#pe"/>
+    <use href="#pe" transform="rotate(60 32 32)"/>
+    <use href="#pe" transform="rotate(120 32 32)"/>
+    <use href="#pe" transform="rotate(180 32 32)"/>
+    <use href="#pe" transform="rotate(240 32 32)"/>
+    <use href="#pe" transform="rotate(300 32 32)"/>
+  </g>
+
+  <!-- the seed cup, stippled. it is what keeps the bloom from
+       closing into a dot when the tab shrinks it. -->
+  <circle cx="32" cy="32" r="5.2" fill="#f8f4ed" stroke="#261d15" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="2.9" fill="none" stroke="#261d15" stroke-width=".7" opacity=".7"/>
+  <g fill="#261d15">
+    <circle cx="32" cy="29.7" r=".75"/><circle cx="34.3" cy="32" r=".75"/>
+    <circle cx="32" cy="34.3" r=".75"/><circle cx="29.7" cy="32" r=".75"/>
+  </g>
+
+  <!-- no field left bare: a dot banked into each corner of the frame -->
+  <g fill="#261d15" opacity=".72">
+    <circle cx="14.6" cy="14.6" r="1.15"/><circle cx="49.4" cy="14.6" r="1.15"/>
+    <circle cx="14.6" cy="49.4" r="1.15"/><circle cx="49.4" cy="49.4" r="1.15"/>
+  </g>
+</svg>

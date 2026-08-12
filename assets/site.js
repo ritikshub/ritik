@@ -23,6 +23,48 @@
     });
   }
 
+  /* ---- the ghari. the day and the hour in India, never the
+         reader's own clock — they already have one of those.
+         Ticks on the minute, and catches up when a backgrounded
+         tab comes forward. No seconds: this bar stays still. ---- */
+  (function () {
+    var box = document.getElementById('ghari');
+    var day = document.getElementById('ghari-d');
+    var hm  = document.getElementById('ghari-hm');
+    var tag = document.getElementById('ghari-t');
+    if (!box || !day || !hm) return;
+
+    var fmt;
+    try {
+      /* en-US so the parts are always "Wed" and "PM"; we lowercase
+         them ourselves to sit with the nav. */
+      fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Kolkata', weekday: 'short',
+        hour: 'numeric', minute: '2-digit', hour12: true
+      });
+      fmt.formatToParts(new Date());
+    } catch (e) { return; }        // no Intl, no tz data — stay hidden
+
+    function tick() {
+      var now = new Date(), p = {};
+      fmt.formatToParts(now).forEach(function (x) { p[x.type] = x.value; });
+      day.textContent = p.weekday.toLowerCase();
+      hm.textContent = p.hour + ':' + p.minute + ' ' + p.dayPeriod.toLowerCase();
+      if (tag) tag.setAttribute('datetime', now.toISOString());
+      box.hidden = false;
+    }
+    tick();
+
+    /* land just past each minute boundary rather than drifting by one
+       setInterval's worth of lateness every hour */
+    (function next() {
+      setTimeout(function () { tick(); next(); }, 60000 - (Date.now() % 60000) + 40);
+    })();
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) tick();
+    });
+  })();
+
   /* ---- sections fade up once, then get out of the way ---- */
   window.__revealed = true;           // tells the head snippet's failsafe to stand down
   var reveals = document.querySelectorAll('[data-reveal]');
