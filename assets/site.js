@@ -1,10 +1,11 @@
 /* ritik.wtf — the lamp, and the fade-up.
    The theme itself is set before first paint by the inline snippet in
-   every <head>. This file only handles the toggle and the observer. */
+   every <head>, which defaults to raat. This file only handles the
+   toggle and the observer. */
 (function () {
   var root = document.documentElement;
 
-  /* ---- the lamp. light is the default, we never follow the OS. ---- */
+  /* ---- the lamp. raat (dark) is the default, we never follow the OS. ---- */
   var lamp = document.getElementById('lamp');
   var meta = document.querySelector('meta[name="theme-color"]');
   /* the icons swap via CSS on html[data-time]; here we only keep the

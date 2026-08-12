@@ -240,15 +240,31 @@ main{ flex:1 0 auto; }
     gap:clamp(48px,6vw,76px);
   }
 }
+/* the greeting sits one line above the name and belongs to it —
+   sentence case, quieter, tucked close so the two read as one line. */
+.greet{
+  font-family:"Yatra One",cursive; font-weight:400; line-height:1.35;
+  font-size:clamp(1.02rem,1.8vw,1.22rem); color:var(--ink-2);
+  margin-bottom:var(--sp-xs);
+}
 .nm{
   font-family:"Eczar",serif; font-weight:600; line-height:.95; letter-spacing:-.015em;
   font-size:clamp(2.8rem,7vw,4.6rem); margin-bottom:var(--sp-md);
+}
+/* the name again in Devanagari. Eczar is a Devanagari-first face, so this is
+   the same drawing hand as the Latin, not a second font. quieter and smaller:
+   an echo standing beside the name, never a second headline. */
+.nm-hi{
+  font-size:.44em; font-weight:500; letter-spacing:0; color:var(--ink-3);
+  margin-left:.16em; white-space:nowrap;
 }
 .tag{
   font-family:"Eczar",serif; font-weight:400; font-size:clamp(1.1rem,2.2vw,1.36rem);
   line-height:1.42; color:var(--ink-2); margin-bottom:var(--sp-lg); max-width:30ch;
 }
-.bio{ color:var(--ink-2); margin-bottom:var(--sp-xl); max-width:56ch; }
+/* the bio runs two paragraphs: tighter between them, full air before the links */
+.bio{ color:var(--ink-2); margin-bottom:var(--sp-md); max-width:56ch; }
+.bio:last-of-type{ margin-bottom:var(--sp-xl); }
 .bio a{
   color:var(--ink); text-decoration-color:var(--hair); text-underline-offset:3px;
   transition:color var(--fast), text-decoration-color var(--fast);
@@ -297,6 +313,8 @@ main{ flex:1 0 auto; }
 .h-copy > *:nth-child(3){ animation-delay:.21s; }
 .h-copy > *:nth-child(4){ animation-delay:.29s; }
 .h-copy > *:nth-child(5){ animation-delay:.37s; }
+.h-copy > *:nth-child(6){ animation-delay:.45s; }
+.h-copy > *:nth-child(7){ animation-delay:.53s; }
 .art{ animation:open 1.3s var(--quint) both .34s; }
 
 /* the panel hangs off one ink nail and never quite settles.
@@ -310,6 +328,24 @@ main{ flex:1 0 auto; }
 @keyframes sway{
   0%,100%{ transform:rotate(1.8deg); }
   50%{ transform:rotate(-1.8deg); }
+}
+
+/* ----------------------------------------------------------
+   HERO ON A PHONE — where most of this gets read.
+   the split is stacked below 860px, so: drop the whole thing
+   further under the sticky bar, and hang the panel on the text
+   column's own edges instead of centring a painting against
+   left-aligned type. ±1.8deg of sway on a full-width panel
+   reaches ~5px past the edge, which the 24px page gutter eats.
+   ---------------------------------------------------------- */
+@media (max-width:859px){
+  .hero{ padding-top:clamp(72px,16vw,96px); }
+  .art{ justify-self:stretch; }
+  .art .figure{ width:100%; max-width:350px; }
+  /* thumbs, not cursors: grow the hit area upward so the drawn
+     hatch underline stays welded to the baseline. */
+  .links{ gap:var(--sp-md) var(--sp-lg); }
+  .links a{ padding-top:8px; }
 }
 
 /* ----------------------------------------------------------

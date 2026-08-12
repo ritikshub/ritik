@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" data-time="din">
+<html lang="en" data-time="raat">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ritik</title>
 <!-- SWAP: description. one sentence, it is what shows in search results. -->
 <meta name="description" content="Ritik. Software engineer at Palyt. I build software, learn from what breaks, and write it down.">
-<meta name="theme-color" content="#f5f0e7">
+<meta name="theme-color" content="#11141f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -18,19 +18,22 @@
 <!-- SWAP: 1200x630. drop it at assets/og.png and uncomment.
 <meta property="og:image" content="https://ritik.wtf/assets/og.png"> -->
 
-<!-- the lamp runs before first paint. light is the default and we never
-     follow the OS, so there is no flash and no surprise. the failsafe
-     un-hides the page if site.js never arrives. -->
+<!-- the lamp runs before first paint. raat (dark) is the default: it is
+     stamped on <html> in the markup so it survives JS being off, and we never
+     follow the OS. the failsafe un-hides the page if site.js never arrives. -->
 <script>
 (function(){var d=document.documentElement;
-try{var t=localStorage.getItem('ritik-lamp');d.dataset.time=(t==='raat')?'raat':'din';}catch(e){}
+var t=null;try{t=localStorage.getItem('ritik-lamp');}catch(e){}
+d.dataset.time=(t==='din')?'din':'raat';
 d.classList.add('reveal-ready');
 setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');},1200);})();
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Yatra One is the greeting line only, and the greeting only exists on this
+     page — the other pages deliberately do not request it. -->
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&family=Yatra+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 
@@ -782,22 +785,36 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
 <section class="hero">
   <div class="h-split">
     <div class="h-copy">
-      <h1 class="nm">Ritik</h1>
+      <!-- the greeting runs straight into the name: one sentence,
+           broken across two lines. -->
+      <p class="greet">Hello there, I am</p>
+      <h1 class="nm">Ritik <span class="nm-hi" lang="hi">रितिक</span></h1>
       <!-- SWAP 2: the tagline. one sentence. the whole site hangs off it.
            write this one last, after everything else exists. -->
-      <p class="tag">I build software, learn from what breaks, and write it down.</p>
+      <p class="tag">Not-so-cracked developer, just figuring out tech and life.</p>
       <!-- SWAP 3: the bio. this is the only place it lives now, so give it
            the three or four sentences it deserves. -->
-      <p class="bio">Currently at <b>Palyt</b>, where I work on inventory, recipe
-        costing, and the parts of a kitchen that nobody wants to look at. Before
-        that, a few things that did not work, which taught me more. I keep notes
-        here because I forget faster than I learn.</p>
+      <p class="bio">I hail from Bihar, older than most countries and
+        underrated by most people. The degree says computer science, VTU
+        Bengaluru, though most of what I actually use came after it.</p>
+      <p class="bio">Two and a half years at Cognizant as a DBA, then Spike.sh,
+        where I ran the backend for their incident management product and built
+        their Slack app, which more than 150 orgs inside Spike use. These days I
+        am at <b>Palyt</b>, building for restaurants: inventory, recipe
+        generation, and software an outlet can actually run profitably on.
+        Hospitality was never new to me, it has been around my whole life, but
+        this is the first time I have got to build for it, and there is a
+        satisfaction in that I have not found anywhere else. Somewhere down the
+        line I want a cafe of my own, in my own city.</p>
+      <p class="bio">Right now I am building, learning and documenting as I go.
+        Backend engineering is most of it, AI and how to use it efficiently is
+        the rest. Keeping the learning a habit is the part that matters.</p>
       <div class="links">
-        <a href="mailto:ritikbr.in@gmail.com">email</a>
+        <a href="/assets/resume.pdf">resume</a>
+        <a href="https://www.linkedin.com/in/ritik-r-75a7461b6/" rel="me noopener">linkedin</a>
         <a href="https://github.com/ritikshub" rel="me noopener">github</a>
         <a href="https://x.com/ritikshub" rel="me noopener">x</a>
-        <a href="https://www.linkedin.com/in/ritik-r-75a7461b6/" rel="me noopener">linkedin</a>
-        <a href="/assets/resume.pdf">resume</a>
+        <a href="mailto:ritikbr.in@gmail.com">email</a>
       </div>
     </div>
     <div class="art">
@@ -856,7 +873,7 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
     <div class="tl-row now">
       <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
       <span class="when num">since 2026</span>
-      <p>Building restaurant software at Palyt: inventory, recipe costing,
+      <p>Building restaurant software at Palyt: inventory, recipe generation,
       payments. Still here.</p>
     </div>
   </div>

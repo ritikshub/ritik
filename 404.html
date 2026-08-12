@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" data-time="din">
+<html lang="en" data-time="raat">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not found · Ritik</title>
 <!-- SWAP: description for this page. -->
 <meta name="description" content="That page does not exist.">
-<meta name="theme-color" content="#f5f0e7">
+<meta name="theme-color" content="#11141f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -16,12 +16,13 @@
 <meta property="og:title" content="Not found · Ritik">
 <meta property="og:description" content="That page does not exist.">
 
-<!-- the lamp runs before first paint. light is the default and we never
-     follow the OS, so there is no flash and no surprise. the failsafe
-     un-hides the page if site.js never arrives. -->
+<!-- the lamp runs before first paint. raat (dark) is the default: it is
+     stamped on <html> in the markup so it survives JS being off, and we never
+     follow the OS. the failsafe un-hides the page if site.js never arrives. -->
 <script>
 (function(){var d=document.documentElement;
-try{var t=localStorage.getItem('ritik-lamp');d.dataset.time=(t==='raat')?'raat':'din';}catch(e){}
+var t=null;try{t=localStorage.getItem('ritik-lamp');}catch(e){}
+d.dataset.time=(t==='din')?'din':'raat';
 d.classList.add('reveal-ready');
 setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');},1200);})();
 </script>
