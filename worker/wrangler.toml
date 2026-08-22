@@ -1,0 +1,19 @@
+name = "aangan"
+main = "src/index.js"
+compatibility_date = "2025-11-01"
+workers_dev = true
+
+# every origin allowed to read the courtyard. anything else gets the
+# answer without the CORS header, which the browser then drops.
+# add your local server here while you are working on the site.
+[vars]
+ALLOWED_ORIGINS = "https://ritik.wtf,http://localhost:8080,http://127.0.0.1:8080"
+
+[[durable_objects.bindings]]
+name = "AANGAN"
+class_name = "Aangan"
+
+# SQLite-backed, which is what the free plan gives you.
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Aangan"]

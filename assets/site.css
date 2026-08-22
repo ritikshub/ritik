@@ -473,6 +473,13 @@ a.w-row:hover .go{ transform:translateX(5px); color:var(--geru); }
 .foot .bloom{ width:7px; height:7px; }
 .foot a{ color:var(--ink-3); text-decoration:none; transition:color var(--fast); }
 .foot a:hover{ color:var(--geru); }
+/* the visit count — the quietest thing in the foot, and the only
+   number on the site that moves. same size and colour as the line it
+   sits in: it is a footnote, not a scoreboard. it stays [hidden]
+   until the worker answers, so the middot never appears alone. */
+.foot .visits{ display:inline-flex; align-items:baseline; white-space:nowrap; }
+.foot .visits[hidden]{ display:none; }
+.foot .visits .dot{ opacity:.5; margin-right:.42em; }
 .foot .icons{ display:flex; gap:var(--sp-md); margin-left:auto; }
 .foot .icons a{ color:var(--ink-3); display:grid; place-items:center;
   transition:color var(--fast), transform var(--fast) var(--quint); }

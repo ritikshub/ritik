@@ -1,0 +1,6 @@
+# GitHub Pages runs Jekyll over this repo whether or not we ask it to.
+# The site is plain HTML and passes straight through; this file exists
+# only to keep the worker source from being published at ritik.wtf/worker/.
+exclude:
+  - worker
+  - README.md

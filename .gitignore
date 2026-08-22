@@ -3,3 +3,7 @@
 .impeccable.md
 .DS_Store
 .playwright-mcp/
+
+# wrangler's local state — the worker source is the only thing worth keeping
+worker/node_modules/
+worker/.wrangler/

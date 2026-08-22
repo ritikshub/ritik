@@ -842,6 +842,11 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
   <div class="page foot-in">
     <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
     <span>Made in Bihar.</span>
+    <!-- how many people have come through THIS page. hidden in the
+         markup: site.js lifts it only once the worker has answered, so
+         javascript off — or a worker that is down — leaves no empty
+         slot and no stray middot. same rule the ghari follows. -->
+    <span class="visits" id="visits" hidden><span class="dot" aria-hidden="true">&middot;</span><span class="num" id="visits-n"></span>&nbsp;visit<span id="visits-s">s</span></span>
     <span class="icons">
       <a href="https://x.com/ritikshub" rel="me noopener" aria-label="Ritik on X"><svg><use href="#ic-x"/></svg></a>
       <a href="https://www.linkedin.com/in/ritik-r-75a7461b6/" rel="me noopener" aria-label="Ritik on LinkedIn"><svg><use href="#ic-li"/></svg></a>

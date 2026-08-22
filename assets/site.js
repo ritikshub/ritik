@@ -5,6 +5,12 @@
 (function () {
   var root = document.documentElement;
 
+  /* SWAP: the aangan endpoint. Deploy worker/ (see worker/README.md),
+     then paste the URL it prints here — no trailing slash. Leave it
+     empty and the courtyard never runs and never appears; nothing
+     else on the page depends on it. */
+  var AANGAN = '';
+
   /* ---- the lamp. raat (dark) is the default, we never follow the OS. ---- */
   var lamp = document.getElementById('lamp');
   var meta = document.querySelector('meta[name="theme-color"]');
@@ -64,6 +70,55 @@
     document.addEventListener('visibilitychange', function () {
       if (!document.hidden) tick();
     });
+  })();
+
+  /* ---- the aangan. how many people have come through the page you
+         are on, set small in the foot. runs on every page; each page
+         keeps its own number.
+
+         what leaves this browser: the path, and whether this browser
+         has been here before. no id, no cookie, no session — the
+         "have I been counted" list lives in localStorage and is never
+         sent. a reader who clears it counts once more, which is the
+         honest cost of not tracking anybody. ---- */
+  (function () {
+    if (!AANGAN) return;                       // not deployed yet: do nothing at all
+    if (root.dataset.lost === '1') return;     // 404s are not a page anyone visited
+
+    var box = document.getElementById('visits');
+    var out = document.getElementById('visits-n');
+    var plural = document.getElementById('visits-s');
+    if (!box || !out) return;
+
+    var path = location.pathname;
+    if (path.slice(-11) === '/index.html') path = path.slice(0, -10);
+
+    var seen = [];
+    try { seen = JSON.parse(localStorage.getItem('ritik-seen') || '[]'); } catch (e) {}
+    if (!Array.isArray(seen)) seen = [];
+    var fresh = seen.indexOf(path) === -1;
+
+    /* text/plain keeps this a CORS-simple request, so there is no
+       preflight round-trip in front of it. */
+    fetch(AANGAN + '/visit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ path: path, count: fresh })
+    }).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).then(function (d) {
+      if (!d || typeof d.count !== 'number' || d.count < 1) return;
+      /* the path is only written down once the count is actually in, so
+         a dropped request retries on the next visit rather than losing
+         this reader for good. */
+      if (fresh) {
+        seen.push(path);
+        try { localStorage.setItem('ritik-seen', JSON.stringify(seen.slice(-64))); } catch (e) {}
+      }
+      out.textContent = d.count;
+      if (plural) plural.textContent = d.count === 1 ? '' : 's';
+      box.hidden = false;                      // a good answer opens the slot
+    }).catch(function () {});                  // worker down: stay hidden, say nothing
   })();
 
   /* ---- sections fade up once, then get out of the way ---- */
