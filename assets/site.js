@@ -1,9 +1,10 @@
-/* ritik.wtf — the lamp, and the fade-up.
+/* ritik.wtf — the lamp, the ghari, the aangan, the paintings, the fade-up.
    The theme itself is set before first paint by the inline snippet in
-   every <head>, which defaults to raat. This file only handles the
-   toggle and the observer. */
+   every <head>, which defaults to raat. This file only handles what
+   happens after: the toggle, the clock, the count, and the observer. */
 (function () {
   var root = document.documentElement;
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* SWAP: the aangan endpoint. Deploy worker/ (see worker/README.md),
      then paste the URL it prints here — no trailing slash. Leave it
@@ -18,17 +19,79 @@
      label and the browser chrome colour honest */
   function paint() {
     var raat = root.dataset.time === 'raat';
-    if (lamp) lamp.setAttribute('aria-label', raat ? 'Switch to din \u2014 light' : 'Switch to raat \u2014 dark');
+    if (lamp) lamp.setAttribute('aria-label', raat ? 'Switch to din — light' : 'Switch to raat — dark');
     if (meta) meta.setAttribute('content', raat ? '#11141f' : '#f5f0e7');
+  }
+  function setTime(t) {
+    root.dataset.time = t;
+    paint();
+    try { localStorage.setItem('ritik-lamp', t); } catch (e) {}
   }
   paint();
   if (lamp) {
     lamp.addEventListener('click', function () {
-      root.dataset.time = root.dataset.time === 'raat' ? 'din' : 'raat';
-      paint();
-      try { localStorage.setItem('ritik-lamp', root.dataset.time); } catch (e) {}
+      var next = root.dataset.time === 'raat' ? 'din' : 'raat';
+
+      /* the light spreads from the lamp: a circle wipe, drawn on the
+         browser's own view-transition snapshot so nothing on the page
+         has to know it happened. no support, or a reader who asked
+         for no motion, and the room simply changes. */
+      if (still || typeof document.startViewTransition !== 'function') { setTime(next); return; }
+
+      var r = lamp.getBoundingClientRect();
+      var x = r.left + r.width / 2, y = r.top + r.height / 2;
+      var reach = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+      root.classList.add('flipping');
+      var vt = document.startViewTransition(function () { setTime(next); });
+      vt.ready.then(function () {
+        root.animate(
+          { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + reach + 'px at ' + x + 'px ' + y + 'px)'] },
+          { duration: 700, easing: 'cubic-bezier(.16,1,.3,1)', pseudoElement: '::view-transition-new(root)' }
+        );
+      }).catch(function () {});
+      vt.finished.then(unflip, unflip);
+      function unflip() { root.classList.remove('flipping'); }
     });
   }
+
+  /* ---- the paintings. each one hangs on a nail and is alive to the
+         reader: it turns a little toward a cursor that crosses it, and
+         a click or a tap gives it a push it takes a moment to shrug off.
+         both are custom properties on the svg; the motion is in css. ---- */
+  (function () {
+    if (still) return;
+    var panels = document.querySelectorAll('.art .figure, .top-art .panel, .lost .figure');
+    if (!panels.length) return;
+    var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    /* where along the width the pointer is: -.5 at the left edge, .5 at the right */
+    function across(el, e) {
+      var r = el.getBoundingClientRect();
+      return Math.max(-.5, Math.min(.5, (e.clientX - r.left) / r.width - .5));
+    }
+
+    panels.forEach(function (el) {
+      if (fine) {
+        el.addEventListener('pointermove', function (e) {
+          el.style.setProperty('--nudge', (across(el, e) * -6).toFixed(2) + 'deg');
+        });
+        el.addEventListener('pointerleave', function () {
+          el.style.setProperty('--nudge', '0deg');
+        });
+      }
+      el.addEventListener('click', function (e) {
+        /* pushed on the right, it swings left, and back */
+        el.style.setProperty('--push', (across(el, e) < 0 ? 7 : -7) + 'deg');
+        el.classList.remove('pushed');
+        void el.getBoundingClientRect();        // let the removal land, so it can restart
+        el.classList.add('pushed');
+      });
+      el.addEventListener('animationend', function (e) {
+        if (e.animationName === 'push') el.classList.remove('pushed');
+      });
+    });
+  })();
 
   /* ---- the ghari. the day and the hour in India, never the
          reader's own clock — they already have one of those.
@@ -124,7 +187,6 @@
   /* ---- sections fade up once, then get out of the way ---- */
   window.__revealed = true;           // tells the head snippet's failsafe to stand down
   var reveals = document.querySelectorAll('[data-reveal]');
-  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (still || !('IntersectionObserver' in window)) {
     root.classList.remove('reveal-ready');

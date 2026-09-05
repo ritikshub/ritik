@@ -3,4 +3,5 @@
 # only to keep the worker source from being published at ritik.wtf/worker/.
 exclude:
   - worker
+  - tools
   - README.md

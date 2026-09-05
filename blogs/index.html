@@ -11,10 +11,17 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="canonical" href="https://ritik.wtf/blogs/">
+<link rel="alternate" type="application/rss+xml" title="Ritik &middot; blogs" href="/blogs/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ritik.wtf/blogs/">
 <meta property="og:title" content="Blogs · Ritik">
 <meta property="og:description" content="Notes on building software for restaurants, and what breaks.">
+<meta property="og:image" content="https://ritik.wtf/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ritik. A Madhubani panel of a raja on horseback, drawn in geru on indigo.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ritikshub">
 
 <!-- the lamp runs before first paint. raat (dark) is the default: it is
      stamped on <html> in the markup so it survives JS being off, and we never
@@ -29,7 +36,7 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 
@@ -63,37 +70,37 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
       <!-- ============ THE PANEL BORDER ============
            a Madhubani painting opens with a double-lined border, the band
            between the lines filled with pattern. corner rosettes. -->
-      <path d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
-      <rect x="5" y="5" width="330" height="290" stroke-width="2.2"/>
-      <rect x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
+      <path pathLength="1" d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
+      <rect pathLength="1" x="5" y="5" width="330" height="290" stroke-width="2.2"/>
+      <rect pathLength="1" x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
       <g stroke-width="1.3">
-        <circle cx="9" cy="9" r="2.6"/><circle cx="331" cy="9" r="2.6"/>
-        <circle cx="9" cy="291" r="2.6"/><circle cx="331" cy="291" r="2.6"/>
+        <circle pathLength="1" cx="9" cy="9" r="2.6"/><circle pathLength="1" cx="331" cy="9" r="2.6"/>
+        <circle pathLength="1" cx="9" cy="291" r="2.6"/><circle pathLength="1" cx="331" cy="291" r="2.6"/>
       </g>
 
       <!-- ============ FIELD FILLERS — no space left empty ============ -->
       <g opacity=".85">
-        <circle cx="52" cy="48" r="8" stroke-width="1.8"/>
-        <circle cx="52" cy="48" r="4.6" stroke-width="1" opacity=".7"/>
+        <circle pathLength="1" cx="52" cy="48" r="8" stroke-width="1.8"/>
+        <circle pathLength="1" cx="52" cy="48" r="4.6" stroke-width="1" opacity=".7"/>
         <g stroke-width="1.4">
-          <path d="M52 36 L52 31"/><path d="M52 60 L52 65"/>
-          <path d="M40 48 L35 48"/><path d="M64 48 L69 48"/>
-          <path d="M44 40 L40 36"/><path d="M60 56 L64 60"/>
-          <path d="M44 56 L40 60"/><path d="M60 40 L64 36"/>
+          <path pathLength="1" d="M52 36 L52 31"/><path pathLength="1" d="M52 60 L52 65"/>
+          <path pathLength="1" d="M40 48 L35 48"/><path pathLength="1" d="M64 48 L69 48"/>
+          <path pathLength="1" d="M44 40 L40 36"/><path pathLength="1" d="M60 56 L64 60"/>
+          <path pathLength="1" d="M44 56 L40 60"/><path pathLength="1" d="M60 40 L64 36"/>
         </g>
         <svg x="272" y="32" width="24" height="24" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
         <g stroke-width="1.5">
-          <path d="M66 252 C64 240 66 228 72 220"/>
-          <path d="M66 244 C60 242 56 237 56 231"/>
-          <path d="M67 234 C62 230 61 225 63 220"/>
-          <path d="M68 244 C74 242 77 237 76 231"/>
-          <path d="M69 232 C74 229 76 224 74 219"/>
+          <path pathLength="1" d="M66 252 C64 240 66 228 72 220"/>
+          <path pathLength="1" d="M66 244 C60 242 56 237 56 231"/>
+          <path pathLength="1" d="M67 234 C62 230 61 225 63 220"/>
+          <path pathLength="1" d="M68 244 C74 242 77 237 76 231"/>
+          <path pathLength="1" d="M69 232 C74 229 76 224 74 219"/>
         </g>
-        <circle cx="185" cy="236" r="4" stroke-width="1.5"/>
+        <circle pathLength="1" cx="185" cy="236" r="4" stroke-width="1.5"/>
         <g fill="currentColor" stroke="none">
-          <circle cx="185" cy="228" r="1.6"/><circle cx="192" cy="232" r="1.6"/>
-          <circle cx="192" cy="240" r="1.6"/><circle cx="185" cy="244" r="1.6"/>
-          <circle cx="178" cy="240" r="1.6"/><circle cx="178" cy="232" r="1.6"/>
+          <circle pathLength="1" cx="185" cy="228" r="1.6"/><circle pathLength="1" cx="192" cy="232" r="1.6"/>
+          <circle pathLength="1" cx="192" cy="240" r="1.6"/><circle pathLength="1" cx="185" cy="244" r="1.6"/>
+          <circle pathLength="1" cx="178" cy="240" r="1.6"/><circle pathLength="1" cx="178" cy="232" r="1.6"/>
         </g>
       </g>
 
@@ -105,172 +112,172 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
            dot rows, straight banded legs. no ballooning curves. -->
 
       <!-- tail -->
-      <path d="M244 120 C280 122 300 150 300 194 C295 182 287 175 277 176
+      <path pathLength="1" d="M244 120 C280 122 300 150 300 194 C295 182 287 175 277 176
                C286 154 274 134 242 130Z" fill="url(#hatch)" stroke-width="2.2"/>
-      <path d="M252 130 C274 138 286 156 288 176" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M252 130 C274 138 286 156 288 176" stroke-width="1" opacity=".7"/>
 
       <!-- legs: straight, tapered, fetlock-banded. far pair then near pair. -->
       <g style="fill:var(--paper)">
-        <path d="M116 162 L113 244 L124 244 L127 164Z" stroke-width="2"/>
-        <path d="M204 162 L205 244 L216 244 L217 164Z" stroke-width="2"/>
-        <path d="M136 164 L133 246 L147 246 L150 166Z" stroke-width="2.4"/>
-        <path d="M226 164 L228 246 L241 246 L241 166Z" stroke-width="2.4"/>
+        <path pathLength="1" d="M116 162 L113 244 L124 244 L127 164Z" stroke-width="2"/>
+        <path pathLength="1" d="M204 162 L205 244 L216 244 L217 164Z" stroke-width="2"/>
+        <path pathLength="1" d="M136 164 L133 246 L147 246 L150 166Z" stroke-width="2.4"/>
+        <path pathLength="1" d="M226 164 L228 246 L241 246 L241 166Z" stroke-width="2.4"/>
       </g>
       <g stroke-width="1.3">
-        <path d="M114 232 L125 233"/><path d="M134 234 L148 235"/>
-        <path d="M206 232 L217 233"/><path d="M229 234 L242 235"/>
+        <path pathLength="1" d="M114 232 L125 233"/><path pathLength="1" d="M134 234 L148 235"/>
+        <path pathLength="1" d="M206 232 L217 233"/><path pathLength="1" d="M229 234 L242 235"/>
       </g>
-      <path d="M111 244 L125 244 L127 256 L108 256Z" fill="currentColor" stroke="none"/>
-      <path d="M203 244 L217 244 L219 256 L200 256Z" fill="currentColor" stroke="none"/>
-      <path d="M131 246 L148 246 L150 258 L128 258Z" fill="currentColor" stroke="none"/>
-      <path d="M226 246 L242 246 L244 258 L223 258Z" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M111 244 L125 244 L127 256 L108 256Z" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M203 244 L217 244 L219 256 L200 256Z" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M131 246 L148 246 L150 258 L128 258Z" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M226 246 L242 246 L244 258 L223 258Z" fill="currentColor" stroke="none"/>
 
       <!-- neck: one straight hatched band from poll to chest -->
-      <path d="M100 52 C94 58 88 62 84 68 C96 96 108 124 122 150
+      <path pathLength="1" d="M100 52 C94 58 88 62 84 68 C96 96 108 124 122 150
                L146 122 C132 96 116 70 100 52Z"
             fill="url(#hatch)" stroke-width="2.6"/>
-      <path d="M88 70 C99 94 110 118 121 142" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M88 70 C99 94 110 118 121 142" stroke-width="1" opacity=".7"/>
 
       <!-- mane: a row of scallops down the crest -->
-      <path d="M104 58 a7 8 0 0 1 9 15 a7 8 0 0 1 9 15 a7 8 0 0 1 10 15 a7 8 0 0 1 10 15"
+      <path pathLength="1" d="M104 58 a7 8 0 0 1 9 15 a7 8 0 0 1 9 15 a7 8 0 0 1 10 15 a7 8 0 0 1 10 15"
             stroke-width="2"/>
 
       <!-- head: a small wedge, muzzle tapering down-left -->
-      <path d="M104 56 C96 50 84 50 74 56 C62 63 52 72 48 80
+      <path pathLength="1" d="M104 56 C96 50 84 50 74 56 C62 63 52 72 48 80
                C45 86 47 92 53 94 C62 97 74 95 84 90
                C94 85 102 74 104 64 C105 61 105 58 104 56Z"
             style="fill:var(--paper)" stroke-width="2.4"/>
-      <path d="M100 58 C90 54 80 55 72 60" stroke-width="1" opacity=".7"/>
-      <path d="M100 52 C98 40 102 30 108 26 C112 32 112 44 110 52Z" stroke-width="2"/>
-      <path d="M112 52 C111 41 115 32 120 28 C124 34 124 45 121 53Z" stroke-width="2"/>
+      <path pathLength="1" d="M100 58 C90 54 80 55 72 60" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M100 52 C98 40 102 30 108 26 C112 32 112 44 110 52Z" stroke-width="2"/>
+      <path pathLength="1" d="M112 52 C111 41 115 32 120 28 C124 34 124 45 121 53Z" stroke-width="2"/>
 
       <!-- the big lashed eye, muzzle band, nostril, mouth -->
-      <path d="M64 74 C70 68 80 68 86 74 C80 80 70 80 64 74Z" stroke-width="1.8"/>
-      <circle cx="75" cy="74" r="2.4" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M64 74 C70 68 80 68 86 74 C80 80 70 80 64 74Z" stroke-width="1.8"/>
+      <circle pathLength="1" cx="75" cy="74" r="2.4" fill="currentColor" stroke="none"/>
       <g stroke-width="1.2">
-        <path d="M86 71 L91 68"/><path d="M87 74 L93 73"/><path d="M86 77 L91 79"/>
+        <path pathLength="1" d="M86 71 L91 68"/><path pathLength="1" d="M87 74 L93 73"/><path pathLength="1" d="M86 77 L91 79"/>
       </g>
       <g stroke-width="1.4">
-        <path d="M63 64 L59 82"/><path d="M67 66 L63 84"/>
+        <path pathLength="1" d="M63 64 L59 82"/><path pathLength="1" d="M67 66 L63 84"/>
       </g>
-      <circle cx="54" cy="84" r="1.5" fill="currentColor" stroke="none"/>
-      <path d="M50 90 C54 93 59 94 63 93" stroke-width="1.4"/>
+      <circle pathLength="1" cx="54" cy="84" r="1.5" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M50 90 C54 93 59 94 63 93" stroke-width="1.4"/>
 
       <!-- body: a flat tube with a squared rump -->
-      <path d="M130 118 C166 112 208 112 242 116 C250 118 252 126 251 136
+      <path pathLength="1" d="M130 118 C166 112 208 112 242 116 C250 118 252 126 251 136
                L248 158 C246 166 240 170 232 170 L138 170
                C128 170 122 162 122 152 L124 128 C125 122 127 118 130 118Z"
             style="fill:var(--paper)" stroke-width="2.6"/>
-      <path d="M136 124 C170 118 206 118 238 122" stroke-width="1" opacity=".7"/>
-      <path d="M144 164 C172 168 204 168 230 164" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M136 124 C170 118 206 118 238 122" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M144 164 C172 168 204 168 230 164" stroke-width="1" opacity=".7"/>
 
       <!-- dot rows along back and belly, the Madhubani filler -->
       <g fill="currentColor" stroke="none">
-        <circle cx="221" cy="128" r="1.3"/><circle cx="233" cy="129" r="1.3"/>
-        <circle cx="144" cy="160" r="1.3"/><circle cx="157" cy="161" r="1.3"/>
-        <circle cx="170" cy="162" r="1.3"/><circle cx="183" cy="162" r="1.3"/>
-        <circle cx="196" cy="162" r="1.3"/><circle cx="209" cy="161" r="1.3"/>
-        <circle cx="222" cy="160" r="1.3"/>
+        <circle pathLength="1" cx="221" cy="128" r="1.3"/><circle pathLength="1" cx="233" cy="129" r="1.3"/>
+        <circle pathLength="1" cx="144" cy="160" r="1.3"/><circle pathLength="1" cx="157" cy="161" r="1.3"/>
+        <circle pathLength="1" cx="170" cy="162" r="1.3"/><circle pathLength="1" cx="183" cy="162" r="1.3"/>
+        <circle pathLength="1" cx="196" cy="162" r="1.3"/><circle pathLength="1" cx="209" cy="161" r="1.3"/>
+        <circle pathLength="1" cx="222" cy="160" r="1.3"/>
       </g>
 
       <!-- chest band and haunch band, with bells -->
       <g stroke-width="1.8">
-        <path d="M134 120 C130 136 129 152 132 168"/>
-        <path d="M228 118 C226 134 226 152 229 168"/>
+        <path pathLength="1" d="M134 120 C130 136 129 152 132 168"/>
+        <path pathLength="1" d="M228 118 C226 134 226 152 229 168"/>
       </g>
       <g stroke-width="1">
-        <path d="M140 120 C136 136 135 152 138 168" opacity=".7"/>
-        <path d="M234 118 C232 134 232 152 235 168" opacity=".7"/>
+        <path pathLength="1" d="M140 120 C136 136 135 152 138 168" opacity=".7"/>
+        <path pathLength="1" d="M234 118 C232 134 232 152 235 168" opacity=".7"/>
       </g>
       <g stroke-width="1.4">
-        <circle cx="131" cy="140" r="2.4"/><circle cx="130" cy="154" r="2.4"/>
-        <circle cx="227" cy="142" r="2.4"/>
+        <circle pathLength="1" cx="131" cy="140" r="2.4"/><circle pathLength="1" cx="130" cy="154" r="2.4"/>
+        <circle pathLength="1" cx="227" cy="142" r="2.4"/>
       </g>
 
       <!-- rein, mouth to fist -->
-      <path d="M58 92 C90 112 116 116 139 110" stroke-width="1.6"/>
+      <path pathLength="1" d="M58 92 C90 112 116 116 139 110" stroke-width="1.6"/>
 
       <!-- ============ THE SADDLE BLANKET ============ -->
-      <path d="M150 114 L216 112 L217 148 A8 6 0 0 1 201 150 A8 6 0 0 1 185 152
+      <path pathLength="1" d="M150 114 L216 112 L217 148 A8 6 0 0 1 201 150 A8 6 0 0 1 185 152
                A8 6 0 0 1 169 154 A8 6 0 0 1 153 156Z"
             style="fill:var(--paper)" stroke-width="2.2"/>
-      <path d="M156 120 L210 118 L211 142 L157 146Z" fill="url(#hatch)" stroke-width="1" opacity=".85"/>
+      <path pathLength="1" d="M156 120 L210 118 L211 142 L157 146Z" fill="url(#hatch)" stroke-width="1" opacity=".85"/>
 
       <!-- ============ THE RAJA ============ -->
 
       <!-- leg over the blanket, slipper pointing left -->
-      <path d="M160 150 C157 156 156 161 158 166 L172 168 C170 162 170 156 172 150Z"
+      <path pathLength="1" d="M160 150 C157 156 156 161 158 166 L172 168 C170 162 170 156 172 150Z"
             style="fill:var(--paper)" stroke-width="2"/>
-      <path d="M152 166 L172 168 L170 177 L149 173Z" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M152 166 L172 168 L170 177 L149 173Z" fill="currentColor" stroke="none"/>
 
       <!-- torso: patterned angavastram with a paper sash -->
-      <path d="M174 58 C169 78 168 98 171 116 L206 118 C210 98 210 78 205 58
+      <path pathLength="1" d="M174 58 C169 78 168 98 171 116 L206 118 C210 98 210 78 205 58
                C195 52 184 52 174 58Z" style="fill:var(--paper)" stroke="none"/>
-      <path d="M174 58 C169 78 168 98 171 116 L206 118 C210 98 210 78 205 58
+      <path pathLength="1" d="M174 58 C169 78 168 98 171 116 L206 118 C210 98 210 78 205 58
                C195 52 184 52 174 58Z" fill="url(#hatch)" stroke-width="2.4"/>
-      <path d="M172 94 L206 82 L206 89 L172 101Z" style="fill:var(--paper)" stroke-width="1.6"/>
+      <path pathLength="1" d="M172 94 L206 82 L206 89 L172 101Z" style="fill:var(--paper)" stroke-width="1.6"/>
 
       <!-- rein arm and fist -->
-      <path d="M181 66 C167 73 153 88 145 104 L153 112 C161 97 173 85 188 77Z"
+      <path pathLength="1" d="M181 66 C167 73 153 88 145 104 L153 112 C161 97 173 85 188 77Z"
             style="fill:var(--paper)" stroke-width="2.2"/>
-      <circle cx="143" cy="109" r="4.5" style="fill:var(--paper)" stroke-width="2"/>
+      <circle pathLength="1" cx="143" cy="109" r="4.5" style="fill:var(--paper)" stroke-width="2"/>
 
       <!-- neck and haar -->
-      <path d="M186 46 L185 60 L200 60 L198 44Z" style="fill:var(--paper)" stroke="none"/>
+      <path pathLength="1" d="M186 46 L185 60 L200 60 L198 44Z" style="fill:var(--paper)" stroke="none"/>
       <g stroke-width="2">
-        <path d="M186 48 L185 59"/><path d="M198 46 L199 58"/>
+        <path pathLength="1" d="M186 48 L185 59"/><path pathLength="1" d="M198 46 L199 58"/>
       </g>
-      <path d="M184 56 C190 61 196 61 201 55" stroke-width="1.5"/>
+      <path pathLength="1" d="M184 56 C190 61 196 61 201 55" stroke-width="1.5"/>
 
       <!-- head, looking left -->
-      <path d="M194 14 C208 16 216 26 216 40 C216 52 210 62 200 66
+      <path pathLength="1" d="M194 14 C208 16 216 26 216 40 C216 52 210 62 200 66
                C192 69 185 66 183 60 C182 56 183 53 186 51
                C181 49 178 45 177 40 C176 36 173 35 170 34
                C167 33 167 30 170 28 L177 25 C180 18 186 13 194 14Z"
             style="fill:var(--paper)" stroke-width="2.4"/>
 
       <!-- brow, eye, nostril, moustache, mouth -->
-      <path d="M190 28 C185 26 180 27 176 30" stroke-width="1.8"/>
-      <path d="M190 37 C187 33 181 33 177 37 C181 41 187 41 190 37Z" stroke-width="1.8"/>
-      <circle cx="184" cy="37" r="2.4" fill="currentColor" stroke="none"/>
-      <path d="M171 40 C173 40 174 42 172 43" stroke-width="1.3"/>
-      <path d="M172 45 C177 50 184 52 191 50 C193 49 194 47 193 45" stroke-width="1.9"/>
-      <path d="M175 54 C179 56 183 56 186 55" stroke-width="1.4"/>
+      <path pathLength="1" d="M190 28 C185 26 180 27 176 30" stroke-width="1.8"/>
+      <path pathLength="1" d="M190 37 C187 33 181 33 177 37 C181 41 187 41 190 37Z" stroke-width="1.8"/>
+      <circle pathLength="1" cx="184" cy="37" r="2.4" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M171 40 C173 40 174 42 172 43" stroke-width="1.3"/>
+      <path pathLength="1" d="M172 45 C177 50 184 52 191 50 C193 49 194 47 193 45" stroke-width="1.9"/>
+      <path pathLength="1" d="M175 54 C179 56 183 56 186 55" stroke-width="1.4"/>
 
       <!-- kundal and the bun -->
-      <circle cx="203" cy="62" r="3" stroke-width="1.6"/>
-      <path d="M212 52 C220 52 224 58 222 64 C218 68 212 66 210 61Z"
+      <circle pathLength="1" cx="203" cy="62" r="3" stroke-width="1.6"/>
+      <path pathLength="1" d="M212 52 C220 52 224 58 222 64 C218 68 212 66 210 61Z"
             fill="url(#hatch)" stroke-width="1.8"/>
 
       <!-- the mukut -->
-      <path d="M172 14 C171 7 174 2 179 1 C183 5 184 10 183 14Z"
+      <path pathLength="1" d="M172 14 C171 7 174 2 179 1 C183 5 184 10 183 14Z"
             fill="url(#hatch)" stroke-width="1.9"/>
-      <path d="M187 12 C187 4 191 0 196 0 C201 2 203 7 202 11Z"
+      <path pathLength="1" d="M187 12 C187 4 191 0 196 0 C201 2 203 7 202 11Z"
             fill="url(#hatch)" stroke-width="2.1"/>
-      <path d="M206 12 C206 6 209 2 214 1 C218 4 219 9 218 13Z"
+      <path pathLength="1" d="M206 12 C206 6 209 2 214 1 C218 4 219 9 218 13Z"
             fill="url(#hatch)" stroke-width="1.9"/>
-      <path d="M174 24 C188 16 204 15 216 21 L219 10 C204 3 186 4 170 13Z"
+      <path pathLength="1" d="M174 24 C188 16 204 15 216 21 L219 10 C204 3 186 4 170 13Z"
             style="fill:var(--paper)" stroke-width="2.2"/>
-      <path d="M178 18 C190 12 203 12 213 15" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M178 18 C190 12 203 12 213 15" stroke-width="1" opacity=".7"/>
       <g stroke-width="1.4">
-        <circle cx="181" cy="18" r="2.2"/><circle cx="195" cy="15" r="2.2"/><circle cx="209" cy="16" r="2.2"/>
+        <circle pathLength="1" cx="181" cy="18" r="2.2"/><circle pathLength="1" cx="195" cy="15" r="2.2"/><circle pathLength="1" cx="209" cy="16" r="2.2"/>
       </g>
 
       <!-- the raised talwar: the fight is stated, not implied -->
-      <path d="M202 74 C209 66 217 57 223 50 L231 56 C225 63 217 72 210 80Z"
+      <path pathLength="1" d="M202 74 C209 66 217 57 223 50 L231 56 C225 63 217 72 210 80Z"
             style="fill:var(--paper)" stroke-width="2.2"/>
-      <path d="M228 42 C236 30 248 18 260 10 C264 7 267 10 265 15
+      <path pathLength="1" d="M228 42 C236 30 248 18 260 10 C264 7 267 10 265 15
                C258 28 247 41 235 51Z" style="fill:var(--paper)" stroke-width="2.2"/>
-      <path d="M234 41 C242 31 251 22 258 15" stroke-width="1" opacity=".7"/>
-      <path d="M224 45 L236 54" stroke-width="2.2"/>
-      <circle cx="228" cy="49" r="4.5" style="fill:var(--paper)" stroke-width="2"/>
-      <circle cx="221" cy="52" r="2.2" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M234 41 C242 31 251 22 258 15" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M224 45 L236 54" stroke-width="2.2"/>
+      <circle pathLength="1" cx="228" cy="49" r="4.5" style="fill:var(--paper)" stroke-width="2"/>
+      <circle pathLength="1" cx="221" cy="52" r="2.2" fill="currentColor" stroke="none"/>
 
       <!-- kachni stipple on the haunch -->
       <g fill="currentColor" stroke="none">
-        <circle cx="238" cy="136" r="1.1"/><circle cx="246" cy="138" r="1.1"/>
-        <circle cx="240" cy="146" r="1.1"/><circle cx="248" cy="148" r="1.1"/>
-        <circle cx="242" cy="156" r="1.1"/>
+        <circle pathLength="1" cx="238" cy="136" r="1.1"/><circle pathLength="1" cx="246" cy="138" r="1.1"/>
+        <circle pathLength="1" cx="240" cy="146" r="1.1"/><circle pathLength="1" cx="248" cy="148" r="1.1"/>
+        <circle pathLength="1" cx="242" cy="156" r="1.1"/>
       </g>
       </g>
     </g>
@@ -280,67 +287,67 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
        one heavy contour, one thin echo inside it. -->
   <symbol id="surya" viewBox="0 0 48 48">
     <g fill="none" stroke="currentColor" stroke-linecap="round">
-      <circle cx="24" cy="24" r="9" stroke-width="2.4"/>
-      <circle cx="24" cy="24" r="5.5" stroke-width="1" opacity=".7"/>
-      <circle cx="24" cy="24" r="1.6" fill="currentColor" stroke="none"/>
+      <circle pathLength="1" cx="24" cy="24" r="9" stroke-width="2.4"/>
+      <circle pathLength="1" cx="24" cy="24" r="5.5" stroke-width="1" opacity=".7"/>
+      <circle pathLength="1" cx="24" cy="24" r="1.6" fill="currentColor" stroke="none"/>
       <g stroke-width="2">
-        <path d="M24 8 L24 3"/><path d="M24 40 L24 45"/>
-        <path d="M8 24 L3 24"/><path d="M40 24 L45 24"/>
-        <path d="M12.7 12.7 L9.2 9.2"/><path d="M35.3 35.3 L38.8 38.8"/>
-        <path d="M12.7 35.3 L9.2 38.8"/><path d="M35.3 12.7 L38.8 9.2"/>
+        <path pathLength="1" d="M24 8 L24 3"/><path pathLength="1" d="M24 40 L24 45"/>
+        <path pathLength="1" d="M8 24 L3 24"/><path pathLength="1" d="M40 24 L45 24"/>
+        <path pathLength="1" d="M12.7 12.7 L9.2 9.2"/><path pathLength="1" d="M35.3 35.3 L38.8 38.8"/>
+        <path pathLength="1" d="M12.7 35.3 L9.2 38.8"/><path pathLength="1" d="M35.3 12.7 L38.8 9.2"/>
       </g>
     </g>
   </symbol>
   <symbol id="chandra" viewBox="0 0 48 48">
     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M24 6 a12 12 0 0 0 18 18 a18 18 0 1 1 -18 -18Z" stroke-width="2.4"/>
-      <path d="M24 6 a12 12 0 0 0 18 18 a18 18 0 1 1 -18 -18Z"
+      <path pathLength="1" d="M24 6 a12 12 0 0 0 18 18 a18 18 0 1 1 -18 -18Z" stroke-width="2.4"/>
+      <path pathLength="1" d="M24 6 a12 12 0 0 0 18 18 a18 18 0 1 1 -18 -18Z"
             transform="translate(20 28) scale(.72) translate(-20 -28)"
             stroke-width="1.2" opacity=".7"/>
-      <circle cx="34" cy="11" r="1.5" fill="currentColor" stroke="none"/>
-      <circle cx="40" cy="19" r="1.1" fill="currentColor" stroke="none"/>
+      <circle pathLength="1" cx="34" cy="11" r="1.5" fill="currentColor" stroke="none"/>
+      <circle pathLength="1" cx="40" cy="19" r="1.1" fill="currentColor" stroke="none"/>
     </g>
   </symbol>
 
   <!-- social glyphs, drawn in the same line grammar. 18px, contour only. -->
   <symbol id="ic-x" viewBox="0 0 24 24">
     <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <path d="M5.5 5.5 L18.5 18.5"/>
-      <path d="M18.5 5.5 L5.5 18.5"/>
+      <path pathLength="1" d="M5.5 5.5 L18.5 18.5"/>
+      <path pathLength="1" d="M18.5 5.5 L5.5 18.5"/>
     </g>
   </symbol>
   <symbol id="ic-li" viewBox="0 0 24 24">
     <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="3" width="18" height="18" rx="4"/>
-      <circle cx="8.2" cy="8.4" r="1.1" fill="currentColor" stroke="none"/>
-      <path d="M8.2 11.5 L8.2 16.8"/>
-      <path d="M12.4 16.8 L12.4 11.2 M12.4 13 C13.2 11 16.4 11.2 16.4 13.8 L16.4 16.8"/>
+      <rect pathLength="1" x="3" y="3" width="18" height="18" rx="4"/>
+      <circle pathLength="1" cx="8.2" cy="8.4" r="1.1" fill="currentColor" stroke="none"/>
+      <path pathLength="1" d="M8.2 11.5 L8.2 16.8"/>
+      <path pathLength="1" d="M12.4 16.8 L12.4 11.2 M12.4 13 C13.2 11 16.4 11.2 16.4 13.8 L16.4 16.8"/>
     </g>
   </symbol>
   <symbol id="ic-gh" viewBox="0 0 24 24">
     <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="7" cy="6" r="2.6"/>
-      <circle cx="7" cy="18" r="2.6"/>
-      <circle cx="17.5" cy="8" r="2.6"/>
-      <path d="M7 8.6 L7 15.4"/>
-      <path d="M7 13.5 C7 11 12 11.5 17.5 10.6"/>
+      <circle pathLength="1" cx="7" cy="6" r="2.6"/>
+      <circle pathLength="1" cx="7" cy="18" r="2.6"/>
+      <circle pathLength="1" cx="17.5" cy="8" r="2.6"/>
+      <path pathLength="1" d="M7 8.6 L7 15.4"/>
+      <path pathLength="1" d="M7 13.5 C7 11 12 11.5 17.5 10.6"/>
     </g>
   </symbol>
   <symbol id="ic-note" viewBox="0 0 24 24">
     <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="8.5" cy="17.5" r="2.8"/>
-      <path d="M11.3 17.5 L11.3 5.5 C14 6.5 16.2 7.6 16.8 10"/>
+      <circle pathLength="1" cx="8.5" cy="17.5" r="2.8"/>
+      <path pathLength="1" d="M11.3 17.5 L11.3 5.5 C14 6.5 16.2 7.6 16.8 10"/>
     </g>
   </symbol>
 
   <symbol id="bloom-mini" viewBox="0 0 120 120">
     <g fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round">
-      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z"/>
-      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(60 60 60)"/>
-      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(120 60 60)"/>
-      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(180 60 60)"/>
-      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(240 60 60)"/>
-      <path d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(300 60 60)"/>
+      <path pathLength="1" d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z"/>
+      <path pathLength="1" d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(60 60 60)"/>
+      <path pathLength="1" d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(120 60 60)"/>
+      <path pathLength="1" d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(180 60 60)"/>
+      <path pathLength="1" d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(240 60 60)"/>
+      <path pathLength="1" d="M60 60 C50 42 50 26 60 12 C70 26 70 42 60 60Z" transform="rotate(300 60 60)"/>
     </g>
   </symbol>
   <!-- ============================================================
@@ -348,9 +355,9 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
        ============================================================ -->
   <symbol id="leaf" viewBox="0 0 40 22">
     <g fill="none" stroke="currentColor" stroke-linejoin="round">
-      <path d="M2 11 C10 1 28 -1 38 5 C30 17 12 21 2 11Z" fill="url(#hatch)" stroke-width="2"/>
-      <path d="M4 11 C12 4 26 3 34 6" stroke-width="1" opacity=".7"/>
-      <path d="M2 11 L38 5" stroke-width="1.2"/>
+      <path pathLength="1" d="M2 11 C10 1 28 -1 38 5 C30 17 12 21 2 11Z" fill="url(#hatch)" stroke-width="2"/>
+      <path pathLength="1" d="M4 11 C12 4 26 3 34 6" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M2 11 L38 5" stroke-width="1.2"/>
     </g>
   </symbol>
 
@@ -362,36 +369,36 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
   <symbol id="kamal" viewBox="0 0 120 120">
     <g fill="none" stroke="currentColor" stroke-linejoin="round">
       <g stroke-width="2.4">
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(45 60 60)"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(90 60 60)"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(135 60 60)"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(180 60 60)"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(225 60 60)"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(270 60 60)"/>
-        <path d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(315 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(45 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(90 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(135 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(180 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(225 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(270 60 60)"/>
+        <path pathLength="1" d="M60 60 C46 38 46 16 60 2 C74 16 74 38 60 60Z" transform="rotate(315 60 60)"/>
       </g>
       <g stroke-width="1" opacity=".7">
-        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z"/>
-        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(90 60 60)"/>
-        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(180 60 60)"/>
-        <path d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(270 60 60)"/>
+        <path pathLength="1" d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z"/>
+        <path pathLength="1" d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(90 60 60)"/>
+        <path pathLength="1" d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(180 60 60)"/>
+        <path pathLength="1" d="M60 54 C52 40 52 26 60 16 C68 26 68 40 60 54Z" transform="rotate(270 60 60)"/>
       </g>
       <g stroke-width="1.8">
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(22.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(67.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(112.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(157.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(202.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(247.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(292.5 60 60)"/>
-        <path d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(337.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(22.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(67.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(112.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(157.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(202.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(247.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(292.5 60 60)"/>
+        <path pathLength="1" d="M60 56 C53 44 53 32 60 24 C67 32 67 44 60 56Z" transform="rotate(337.5 60 60)"/>
       </g>
-      <circle cx="60" cy="60" r="11" style="fill:var(--paper)" stroke-width="2.2"/>
-      <circle cx="60" cy="60" r="7" stroke-width="1" opacity=".7"/>
+      <circle pathLength="1" cx="60" cy="60" r="11" style="fill:var(--paper)" stroke-width="2.2"/>
+      <circle pathLength="1" cx="60" cy="60" r="7" stroke-width="1" opacity=".7"/>
       <g fill="currentColor" stroke="none">
-        <circle cx="60" cy="55" r="1.5"/><circle cx="64" cy="61" r="1.5"/>
-        <circle cx="56" cy="61" r="1.5"/><circle cx="60" cy="65" r="1.5"/>
+        <circle pathLength="1" cx="60" cy="55" r="1.5"/><circle pathLength="1" cx="64" cy="61" r="1.5"/>
+        <circle pathLength="1" cx="56" cy="61" r="1.5"/><circle pathLength="1" cx="60" cy="65" r="1.5"/>
       </g>
     </g>
   </symbol>
@@ -406,94 +413,94 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
     <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
 
       <!-- tail first, the body crops it -->
-      <path d="M196 65 C214 58 232 52 244 42 L278 14 C284 9 291 14 288 21
+      <path pathLength="1" d="M196 65 C214 58 232 52 244 42 L278 14 C284 9 291 14 288 21
                L271 62 C270 65 270 65 271 68 L288 109 C291 116 284 121 278 116
                L244 88 C232 78 214 72 196 65Z" fill="url(#hatch)" stroke-width="2.4"/>
       <g stroke-width="1.1" opacity=".75">
-        <path d="M204 61 C228 51 252 39 274 21"/>
-        <path d="M204 69 C228 79 252 91 274 109"/>
-        <path d="M202 64 L264 45"/><path d="M202 67 L264 85"/>
+        <path pathLength="1" d="M204 61 C228 51 252 39 274 21"/>
+        <path pathLength="1" d="M204 69 C228 79 252 91 274 109"/>
+        <path pathLength="1" d="M202 64 L264 45"/><path pathLength="1" d="M202 67 L264 85"/>
       </g>
 
       <!-- dorsal and belly fins, ray-lined, behind the body -->
-      <path d="M96 26 C118 6 150 0 172 10 L168 30 C146 20 118 20 96 26Z"
+      <path pathLength="1" d="M96 26 C118 6 150 0 172 10 L168 30 C146 20 118 20 96 26Z"
             fill="url(#hatch)" stroke-width="2.2"/>
       <g stroke-width="1.1" opacity=".8">
-        <path d="M108 22 L112 7"/><path d="M126 18 L129 3"/>
-        <path d="M144 17 L148 4"/><path d="M160 20 L164 8"/>
+        <path pathLength="1" d="M108 22 L112 7"/><path pathLength="1" d="M126 18 L129 3"/>
+        <path pathLength="1" d="M144 17 L148 4"/><path pathLength="1" d="M160 20 L164 8"/>
       </g>
-      <path d="M104 104 C124 124 152 128 168 119 L162 101 C144 110 122 110 104 104Z"
+      <path pathLength="1" d="M104 104 C124 124 152 128 168 119 L162 101 C144 110 122 110 104 104Z"
             fill="url(#hatch)" stroke-width="2.2"/>
       <g stroke-width="1.1" opacity=".8">
-        <path d="M118 108 L122 122"/><path d="M136 111 L140 125"/><path d="M152 110 L157 122"/>
+        <path pathLength="1" d="M118 108 L122 122"/><path pathLength="1" d="M136 111 L140 125"/><path pathLength="1" d="M152 110 L157 122"/>
       </g>
 
       <!-- the body lens, paper so head stays stark and tail crops -->
-      <path d="M14 65 C40 30 96 16 142 20 C178 23 200 42 206 65
+      <path pathLength="1" d="M14 65 C40 30 96 16 142 20 C178 23 200 42 206 65
                C200 88 178 107 142 110 C96 114 40 100 14 65Z"
             style="fill:var(--paper)" stroke-width="2.6"/>
 
       <!-- the four band dividers, each doubled -->
       <g stroke-width="1.6">
-        <path d="M68 40 C96 32 120 31 142 34 C168 38 190 47 200 56"/>
-        <path d="M68 57 C96 51 120 50 142 53 C170 56 192 59 203 62"/>
-        <path d="M68 75 C96 72 120 72 142 75 C170 77 192 73 203 69"/>
-        <path d="M68 92 C96 91 120 91 142 94 C168 92 190 83 200 76"/>
+        <path pathLength="1" d="M68 40 C96 32 120 31 142 34 C168 38 190 47 200 56"/>
+        <path pathLength="1" d="M68 57 C96 51 120 50 142 53 C170 56 192 59 203 62"/>
+        <path pathLength="1" d="M68 75 C96 72 120 72 142 75 C170 77 192 73 203 69"/>
+        <path pathLength="1" d="M68 92 C96 91 120 91 142 94 C168 92 190 83 200 76"/>
       </g>
 
       <!-- band 2 and band 4 flooded with hatch -->
-      <path d="M68 40 C96 32 120 31 142 34 C168 38 190 47 200 56
+      <path pathLength="1" d="M68 40 C96 32 120 31 142 34 C168 38 190 47 200 56
                L203 62 C192 59 170 56 142 53 C120 50 96 51 68 57Z"
             fill="url(#hatch)" stroke="none"/>
-      <path d="M68 75 C96 72 120 72 142 75 C170 77 192 73 203 69
+      <path pathLength="1" d="M68 75 C96 72 120 72 142 75 C170 77 192 73 203 69
                L200 76 C190 83 168 92 142 94 C120 91 96 91 68 92Z"
             fill="url(#hatch)" stroke="none"/>
 
       <!-- band 3, the widest, carries the scallop scales -->
       <g stroke-width="1.3" opacity=".9">
-        <path d="M74 62 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0
+        <path pathLength="1" d="M74 62 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0
                  a9 7 0 0 1 18 0 a9 7 0 0 1 18 0 a9 7 0 0 1 18 0"/>
       </g>
 
       <!-- bands 1 and 5, the dot rows against the contour -->
       <g fill="currentColor" stroke="none">
-        <circle cx="84" cy="30" r="1.4"/><circle cx="104" cy="26" r="1.4"/>
-        <circle cx="124" cy="24" r="1.4"/><circle cx="144" cy="25" r="1.4"/>
-        <circle cx="164" cy="30" r="1.4"/><circle cx="182" cy="38" r="1.4"/>
-        <circle cx="84" cy="99" r="1.4"/><circle cx="104" cy="103" r="1.4"/>
-        <circle cx="124" cy="105" r="1.4"/><circle cx="144" cy="104" r="1.4"/>
-        <circle cx="164" cy="99" r="1.4"/><circle cx="182" cy="90" r="1.4"/>
+        <circle pathLength="1" cx="84" cy="30" r="1.4"/><circle pathLength="1" cx="104" cy="26" r="1.4"/>
+        <circle pathLength="1" cx="124" cy="24" r="1.4"/><circle pathLength="1" cx="144" cy="25" r="1.4"/>
+        <circle pathLength="1" cx="164" cy="30" r="1.4"/><circle pathLength="1" cx="182" cy="38" r="1.4"/>
+        <circle pathLength="1" cx="84" cy="99" r="1.4"/><circle pathLength="1" cx="104" cy="103" r="1.4"/>
+        <circle pathLength="1" cx="124" cy="105" r="1.4"/><circle pathLength="1" cx="144" cy="104" r="1.4"/>
+        <circle pathLength="1" cx="164" cy="99" r="1.4"/><circle pathLength="1" cx="182" cy="90" r="1.4"/>
       </g>
 
       <!-- the gill band: two heavy arcs, the ticks between them -->
-      <path d="M66 27 C52 44 50 86 64 103" stroke-width="2.4"/>
-      <path d="M76 31 C64 46 62 84 74 99" stroke-width="1.6"/>
+      <path pathLength="1" d="M66 27 C52 44 50 86 64 103" stroke-width="2.4"/>
+      <path pathLength="1" d="M76 31 C64 46 62 84 74 99" stroke-width="1.6"/>
       <g stroke-width="1" opacity=".75">
-        <path d="M60 44 L70 46"/><path d="M58 56 L68 57"/>
-        <path d="M58 70 L68 70"/><path d="M60 84 L70 82"/>
+        <path pathLength="1" d="M60 44 L70 46"/><path pathLength="1" d="M58 56 L68 57"/>
+        <path pathLength="1" d="M58 70 L68 70"/><path pathLength="1" d="M60 84 L70 82"/>
       </g>
 
       <!-- the one huge fish eye, lashed -->
-      <circle cx="44" cy="61" r="10" style="fill:var(--paper)" stroke-width="2.2"/>
-      <circle cx="44" cy="61" r="5.4" stroke-width="1" opacity=".7"/>
-      <circle cx="44" cy="61" r="2.8" fill="currentColor" stroke="none"/>
+      <circle pathLength="1" cx="44" cy="61" r="10" style="fill:var(--paper)" stroke-width="2.2"/>
+      <circle pathLength="1" cx="44" cy="61" r="5.4" stroke-width="1" opacity=".7"/>
+      <circle pathLength="1" cx="44" cy="61" r="2.8" fill="currentColor" stroke="none"/>
       <g stroke-width="1.3">
-        <path d="M37 52 L34 46"/><path d="M44 50 L44 44"/><path d="M51 52 L54 46"/>
+        <path pathLength="1" d="M37 52 L34 46"/><path pathLength="1" d="M44 50 L44 44"/><path pathLength="1" d="M51 52 L54 46"/>
       </g>
 
       <!-- mouth and the stipple of the stark head -->
-      <path d="M16 70 C24 76 34 78 42 76" stroke-width="1.6"/>
+      <path pathLength="1" d="M16 70 C24 76 34 78 42 76" stroke-width="1.6"/>
       <g fill="currentColor" stroke="none">
-        <circle cx="30" cy="86" r="1.4"/><circle cx="44" cy="88" r="1.4"/>
-        <circle cx="32" cy="46" r="1.4"/><circle cx="52" cy="38" r="1.4"/>
+        <circle pathLength="1" cx="30" cy="86" r="1.4"/><circle pathLength="1" cx="44" cy="88" r="1.4"/>
+        <circle pathLength="1" cx="32" cy="46" r="1.4"/><circle pathLength="1" cx="52" cy="38" r="1.4"/>
       </g>
 
       <!-- pectoral fin lying across the bands -->
-      <path d="M84 76 C96 94 112 102 122 98 C116 84 102 74 84 76Z"
+      <path pathLength="1" d="M84 76 C96 94 112 102 122 98 C116 84 102 74 84 76Z"
             style="fill:var(--paper)" stroke-width="2.2"/>
       <g stroke-width="1.1" opacity=".8">
-        <path d="M90 79 C100 90 110 96 118 96"/>
-        <path d="M96 76 C104 86 112 92 120 94"/>
+        <path pathLength="1" d="M90 79 C100 90 110 96 118 96"/>
+        <path pathLength="1" d="M96 76 C104 86 112 92 120 94"/>
       </g>
     </g>
   </symbol>
@@ -505,37 +512,37 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
        ============================================================ -->
   <symbol id="bans" viewBox="0 0 100 200">
     <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M42 200 L42 16 C42 9 46 5 50 5 C54 5 58 9 58 16 L58 200Z"
+      <path pathLength="1" d="M42 200 L42 16 C42 9 46 5 50 5 C54 5 58 9 58 16 L58 200Z"
             fill="url(#hatch)" stroke-width="2.4"/>
-      <path d="M46 196 L46 18" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M46 196 L46 18" stroke-width="1" opacity=".7"/>
 
       <g stroke-width="2.2">
-        <path d="M41 44 L59 44"/><path d="M41 88 L59 88"/>
-        <path d="M41 132 L59 132"/><path d="M41 176 L59 176"/>
+        <path pathLength="1" d="M41 44 L59 44"/><path pathLength="1" d="M41 88 L59 88"/>
+        <path pathLength="1" d="M41 132 L59 132"/><path pathLength="1" d="M41 176 L59 176"/>
       </g>
       <g stroke-width="1" opacity=".7">
-        <path d="M42 49 L58 49"/><path d="M42 93 L58 93"/>
-        <path d="M42 137 L58 137"/><path d="M42 181 L58 181"/>
+        <path pathLength="1" d="M42 49 L58 49"/><path pathLength="1" d="M42 93 L58 93"/>
+        <path pathLength="1" d="M42 137 L58 137"/><path pathLength="1" d="M42 181 L58 181"/>
       </g>
 
       <!-- blades off each joint, alternating long and short -->
       <g stroke-width="1.9">
-        <path d="M42 44 C28 41 14 32 4 19 C17 22 32 29 41 37Z" fill="url(#hatch)"/>
-        <path d="M58 44 C72 41 86 32 96 19 C83 22 68 29 59 37Z" fill="url(#hatch)"/>
-        <path d="M42 88 C30 86 19 79 11 69 C22 71 34 76 41 82Z" fill="url(#hatch)"/>
-        <path d="M58 88 C70 86 81 79 89 69 C78 71 66 76 59 82Z" fill="url(#hatch)"/>
-        <path d="M42 132 C28 129 14 120 4 107 C17 110 32 117 41 125Z" fill="url(#hatch)"/>
-        <path d="M58 132 C72 129 86 120 96 107 C83 110 68 117 59 125Z" fill="url(#hatch)"/>
+        <path pathLength="1" d="M42 44 C28 41 14 32 4 19 C17 22 32 29 41 37Z" fill="url(#hatch)"/>
+        <path pathLength="1" d="M58 44 C72 41 86 32 96 19 C83 22 68 29 59 37Z" fill="url(#hatch)"/>
+        <path pathLength="1" d="M42 88 C30 86 19 79 11 69 C22 71 34 76 41 82Z" fill="url(#hatch)"/>
+        <path pathLength="1" d="M58 88 C70 86 81 79 89 69 C78 71 66 76 59 82Z" fill="url(#hatch)"/>
+        <path pathLength="1" d="M42 132 C28 129 14 120 4 107 C17 110 32 117 41 125Z" fill="url(#hatch)"/>
+        <path pathLength="1" d="M58 132 C72 129 86 120 96 107 C83 110 68 117 59 125Z" fill="url(#hatch)"/>
       </g>
       <g stroke-width="1" opacity=".7">
-        <path d="M40 41 C28 37 16 29 8 21"/><path d="M60 41 C72 37 84 29 92 21"/>
-        <path d="M40 129 C28 125 16 117 8 109"/><path d="M60 129 C72 125 84 117 92 109"/>
+        <path pathLength="1" d="M40 41 C28 37 16 29 8 21"/><path pathLength="1" d="M60 41 C72 37 84 29 92 21"/>
+        <path pathLength="1" d="M40 129 C28 125 16 117 8 109"/><path pathLength="1" d="M60 129 C72 125 84 117 92 109"/>
       </g>
 
       <!-- stipple down the alternate segments -->
       <g fill="currentColor" stroke="none">
-        <circle cx="50" cy="60" r="1.3"/><circle cx="50" cy="70" r="1.3"/>
-        <circle cx="50" cy="148" r="1.3"/><circle cx="50" cy="158" r="1.3"/>
+        <circle pathLength="1" cx="50" cy="60" r="1.3"/><circle pathLength="1" cx="50" cy="70" r="1.3"/>
+        <circle pathLength="1" cx="50" cy="148" r="1.3"/><circle pathLength="1" cx="50" cy="158" r="1.3"/>
       </g>
     </g>
   </symbol>
@@ -546,51 +553,51 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
        ============================================================ -->
   <symbol id="suga" viewBox="0 0 130 150">
     <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M46 94 C38 112 26 128 8 140 C18 145 32 141 44 131
+      <path pathLength="1" d="M46 94 C38 112 26 128 8 140 C18 145 32 141 44 131
                C54 123 60 111 62 100Z" fill="url(#hatch)" stroke-width="2.2"/>
       <g stroke-width="1.1" opacity=".75">
-        <path d="M48 100 C38 116 26 128 14 137"/>
-        <path d="M54 104 C46 118 36 130 26 137"/>
+        <path pathLength="1" d="M48 100 C38 116 26 128 14 137"/>
+        <path pathLength="1" d="M54 104 C46 118 36 130 26 137"/>
       </g>
 
-      <path d="M40 60 C44 36 66 22 86 30 C104 38 110 62 102 82
+      <path pathLength="1" d="M40 60 C44 36 66 22 86 30 C104 38 110 62 102 82
                C94 102 70 110 54 100 C42 92 37 76 40 60Z"
             style="fill:var(--paper)" stroke-width="2.6"/>
-      <path d="M47 62 C50 43 68 31 85 37" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M47 62 C50 43 68 31 85 37" stroke-width="1" opacity=".7"/>
 
-      <path d="M56 58 C72 52 90 60 96 76 C88 92 68 96 56 86
+      <path pathLength="1" d="M56 58 C72 52 90 60 96 76 C88 92 68 96 56 86
                C50 78 50 66 56 58Z" fill="url(#hatch)" stroke-width="2.2"/>
       <g stroke-width="1.2" opacity=".85">
-        <path d="M59 66 C68 61 81 63 88 71"/>
-        <path d="M57 76 C66 71 79 73 88 81"/>
-        <path d="M58 85 C66 81 76 82 84 88"/>
+        <path pathLength="1" d="M59 66 C68 61 81 63 88 71"/>
+        <path pathLength="1" d="M57 76 C66 71 79 73 88 81"/>
+        <path pathLength="1" d="M58 85 C66 81 76 82 84 88"/>
       </g>
 
-      <path d="M74 20 C90 18 102 28 102 42 C102 52 96 60 86 62
+      <path pathLength="1" d="M74 20 C90 18 102 28 102 42 C102 52 96 60 86 62
                C74 64 66 56 66 44 C66 30 66 22 74 20Z"
             style="fill:var(--paper)" stroke-width="2.4"/>
-      <path d="M64 50 C74 56 86 56 94 50" stroke-width="2"/>
-      <path d="M64 55 C74 61 86 61 94 55" stroke-width="1" opacity=".7"/>
-      <path d="M100 32 C112 32 120 40 118 50 C112 56 102 54 98 46Z"
+      <path pathLength="1" d="M64 50 C74 56 86 56 94 50" stroke-width="2"/>
+      <path pathLength="1" d="M64 55 C74 61 86 61 94 55" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M100 32 C112 32 120 40 118 50 C112 56 102 54 98 46Z"
             style="fill:var(--paper)" stroke-width="2.2"/>
-      <path d="M104 38 C112 38 116 43 115 48" stroke-width="1" opacity=".7"/>
-      <path d="M100 46 C106 50 112 50 116 47" stroke-width="1.3"/>
+      <path pathLength="1" d="M104 38 C112 38 116 43 115 48" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M100 46 C106 50 112 50 116 47" stroke-width="1.3"/>
 
-      <circle cx="88" cy="38" r="6.5" stroke-width="1.9"/>
-      <circle cx="88" cy="38" r="3.2" stroke-width="1" opacity=".7"/>
-      <circle cx="88" cy="38" r="1.8" fill="currentColor" stroke="none"/>
+      <circle pathLength="1" cx="88" cy="38" r="6.5" stroke-width="1.9"/>
+      <circle pathLength="1" cx="88" cy="38" r="3.2" stroke-width="1" opacity=".7"/>
+      <circle pathLength="1" cx="88" cy="38" r="1.8" fill="currentColor" stroke="none"/>
 
       <g stroke-width="1.5">
-        <path d="M76 19 C74 12 76 6 82 3"/>
-        <path d="M84 18 C84 11 88 5 94 4"/>
+        <path pathLength="1" d="M76 19 C74 12 76 6 82 3"/>
+        <path pathLength="1" d="M84 18 C84 11 88 5 94 4"/>
       </g>
       <g stroke-width="1.8">
-        <path d="M66 100 L64 114"/><path d="M64 114 L56 120"/><path d="M64 114 L70 121"/>
-        <path d="M84 102 L84 116"/><path d="M84 116 L76 122"/><path d="M84 116 L91 122"/>
+        <path pathLength="1" d="M66 100 L64 114"/><path pathLength="1" d="M64 114 L56 120"/><path pathLength="1" d="M64 114 L70 121"/>
+        <path pathLength="1" d="M84 102 L84 116"/><path pathLength="1" d="M84 116 L76 122"/><path pathLength="1" d="M84 116 L91 122"/>
       </g>
       <g fill="currentColor" stroke="none">
-        <circle cx="48" cy="74" r="1.3"/><circle cx="46" cy="84" r="1.3"/>
-        <circle cx="54" cy="92" r="1.3"/>
+        <circle pathLength="1" cx="48" cy="74" r="1.3"/><circle pathLength="1" cx="46" cy="84" r="1.3"/>
+        <circle pathLength="1" cx="54" cy="92" r="1.3"/>
       </g>
     </g>
   </symbol>
@@ -602,23 +609,23 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
        ============================================================ -->
   <symbol id="matsya" viewBox="0 0 340 300">
     <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
-      <rect x="5" y="5" width="330" height="290" stroke-width="2.2"/>
-      <rect x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
+      <path pathLength="1" d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
+      <rect pathLength="1" x="5" y="5" width="330" height="290" stroke-width="2.2"/>
+      <rect pathLength="1" x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
       <g stroke-width="1.3">
-        <circle cx="9" cy="9" r="2.6"/><circle cx="331" cy="9" r="2.6"/>
-        <circle cx="9" cy="291" r="2.6"/><circle cx="331" cy="291" r="2.6"/>
+        <circle pathLength="1" cx="9" cy="9" r="2.6"/><circle pathLength="1" cx="331" cy="9" r="2.6"/>
+        <circle pathLength="1" cx="9" cy="291" r="2.6"/><circle pathLength="1" cx="331" cy="291" r="2.6"/>
       </g>
 
       <!-- water at the surface and again at the floor -->
       <g opacity=".85">
-        <path d="M22 34 C50 24 76 44 104 34 C132 24 158 44 186 34
+        <path pathLength="1" d="M22 34 C50 24 76 44 104 34 C132 24 158 44 186 34
                  C214 24 242 44 270 34 C292 26 306 32 318 38" stroke-width="1.6"/>
-        <path d="M22 41 C50 31 76 51 104 41 C132 31 158 51 186 41
+        <path pathLength="1" d="M22 41 C50 31 76 51 104 41 C132 31 158 51 186 41
                  C214 31 242 51 270 41 C292 33 306 39 318 45" stroke-width="1" opacity=".7"/>
-        <path d="M22 268 C50 258 76 278 104 268 C132 258 158 278 186 268
+        <path pathLength="1" d="M22 268 C50 258 76 278 104 268 C132 258 158 278 186 268
                  C214 258 242 278 270 268 C292 260 306 266 318 272" stroke-width="1.6"/>
-        <path d="M22 275 C50 265 76 285 104 275 C132 265 158 285 186 275
+        <path pathLength="1" d="M22 275 C50 265 76 285 104 275 C132 265 158 285 186 275
                  C214 265 242 285 270 275 C292 267 306 273 318 279" stroke-width="1" opacity=".7"/>
       </g>
 
@@ -633,12 +640,12 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
       <svg x="244" y="56" width="56" height="56" viewBox="0 0 120 120"><use href="#kamal"/></svg>
       <!-- the stem stops above the lower fish. it used to run through
            its head, which read as a wire across the panel. -->
-      <path d="M272 112 C271 126 273 140 279 152" stroke-width="1.8"/>
-      <path d="M277 113 C276 126 278 138 283 150" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M272 112 C271 126 273 140 279 152" stroke-width="1.8"/>
+      <path pathLength="1" d="M277 113 C276 126 278 138 283 150" stroke-width="1" opacity=".7"/>
 
       <svg x="30" y="168" width="32" height="32" viewBox="0 0 120 120"><use href="#bloom-mini"/></svg>
-      <path d="M46 200 C48 226 58 248 70 266" stroke-width="1.8"/>
-      <path d="M51 199 C53 224 62 244 74 262" stroke-width="1" opacity=".7"/>
+      <path pathLength="1" d="M46 200 C48 226 58 248 70 266" stroke-width="1.8"/>
+      <path pathLength="1" d="M51 199 C53 224 62 244 74 262" stroke-width="1" opacity=".7"/>
 
       <g transform="translate(268 238) rotate(-16)"><use href="#leaf" width="42" height="23"/></g>
       <g transform="translate(206 252) rotate(12)"><use href="#leaf" width="36" height="20"/></g>
@@ -649,28 +656,28 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
 
       <!-- reeds off the floor -->
       <g stroke-width="1.6" opacity=".9">
-        <path d="M92 266 C90 244 94 224 104 210"/>
-        <path d="M104 266 C104 246 110 228 120 216"/>
-        <path d="M98 240 C90 238 85 231 85 224"/>
-        <path d="M110 244 C118 241 122 234 121 227"/>
-        <path d="M150 268 C149 252 153 238 160 228"/>
-        <path d="M156 246 C149 244 145 238 146 232"/>
-        <path d="M186 270 C186 254 190 240 198 230"/>
-        <path d="M192 248 C186 246 182 240 183 234"/>
+        <path pathLength="1" d="M92 266 C90 244 94 224 104 210"/>
+        <path pathLength="1" d="M104 266 C104 246 110 228 120 216"/>
+        <path pathLength="1" d="M98 240 C90 238 85 231 85 224"/>
+        <path pathLength="1" d="M110 244 C118 241 122 234 121 227"/>
+        <path pathLength="1" d="M150 268 C149 252 153 238 160 228"/>
+        <path pathLength="1" d="M156 246 C149 244 145 238 146 232"/>
+        <path pathLength="1" d="M186 270 C186 254 190 240 198 230"/>
+        <path pathLength="1" d="M192 248 C186 246 182 240 183 234"/>
       </g>
 
       <!-- stipple: no field left unlucky -->
       <g fill="currentColor" stroke="none" opacity=".9">
-        <circle cx="42" cy="238" r="1.5"/><circle cx="58" cy="248" r="1.5"/>
-        <circle cx="38" cy="256" r="1.5"/><circle cx="70" cy="230" r="1.5"/>
-        <circle cx="66" cy="196" r="1.5"/><circle cx="80" cy="186" r="1.5"/>
-        <circle cx="76" cy="204" r="1.5"/>
-        <circle cx="306" cy="128" r="1.5"/><circle cx="294" cy="144" r="1.5"/>
-        <circle cx="310" cy="158" r="1.5"/><circle cx="292" cy="116" r="1.5"/>
-        <circle cx="304" cy="172" r="1.5"/>
-        <circle cx="196" cy="284" r="1.5"/><circle cx="212" cy="278" r="1.5"/>
-        <circle cx="66" cy="52" r="1.5"/><circle cx="52" cy="62" r="1.5"/>
-        <circle cx="128" cy="196" r="1.5"/><circle cx="118" cy="186" r="1.5"/>
+        <circle pathLength="1" cx="42" cy="238" r="1.5"/><circle pathLength="1" cx="58" cy="248" r="1.5"/>
+        <circle pathLength="1" cx="38" cy="256" r="1.5"/><circle pathLength="1" cx="70" cy="230" r="1.5"/>
+        <circle pathLength="1" cx="66" cy="196" r="1.5"/><circle pathLength="1" cx="80" cy="186" r="1.5"/>
+        <circle pathLength="1" cx="76" cy="204" r="1.5"/>
+        <circle pathLength="1" cx="306" cy="128" r="1.5"/><circle pathLength="1" cx="294" cy="144" r="1.5"/>
+        <circle pathLength="1" cx="310" cy="158" r="1.5"/><circle pathLength="1" cx="292" cy="116" r="1.5"/>
+        <circle pathLength="1" cx="304" cy="172" r="1.5"/>
+        <circle pathLength="1" cx="196" cy="284" r="1.5"/><circle pathLength="1" cx="212" cy="278" r="1.5"/>
+        <circle pathLength="1" cx="66" cy="52" r="1.5"/><circle pathLength="1" cx="52" cy="62" r="1.5"/>
+        <circle pathLength="1" cx="128" cy="196" r="1.5"/><circle pathLength="1" cx="118" cy="186" r="1.5"/>
       </g>
     </g>
   </symbol>
@@ -682,12 +689,12 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
        ============================================================ -->
   <symbol id="kohbar" viewBox="0 0 340 300">
     <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
-      <rect x="5" y="5" width="330" height="290" stroke-width="2.2"/>
-      <rect x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
+      <path pathLength="1" d="M5 5 H335 V295 H5 Z M13 13 V287 H327 V13 Z" fill="url(#hatch)" fill-rule="evenodd"/>
+      <rect pathLength="1" x="5" y="5" width="330" height="290" stroke-width="2.2"/>
+      <rect pathLength="1" x="13" y="13" width="314" height="274" stroke-width="1.2" opacity=".8"/>
       <g stroke-width="1.3">
-        <circle cx="9" cy="9" r="2.6"/><circle cx="331" cy="9" r="2.6"/>
-        <circle cx="9" cy="291" r="2.6"/><circle cx="331" cy="291" r="2.6"/>
+        <circle pathLength="1" cx="9" cy="9" r="2.6"/><circle pathLength="1" cx="331" cy="9" r="2.6"/>
+        <circle pathLength="1" cx="9" cy="291" r="2.6"/><circle pathLength="1" cx="331" cy="291" r="2.6"/>
       </g>
 
       <!-- the grove: one tall stalk centred, two shorter flanking.
@@ -709,36 +716,36 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
 
       <!-- the pond the grove stands in -->
       <g opacity=".85">
-        <path d="M22 250 C50 240 76 260 104 250 C132 240 158 260 186 250
+        <path pathLength="1" d="M22 250 C50 240 76 260 104 250 C132 240 158 260 186 250
                  C214 240 242 260 270 250 C292 242 306 248 318 254" stroke-width="1.6"/>
-        <path d="M22 257 C50 247 76 267 104 257 C132 247 158 267 186 257
+        <path pathLength="1" d="M22 257 C50 247 76 267 104 257 C132 247 158 267 186 257
                  C214 247 242 267 270 257 C292 249 306 255 318 261" stroke-width="1" opacity=".7"/>
       </g>
       <svg x="120" y="242" width="100" height="43" viewBox="0 0 300 130"><use href="#matsya-one"/></svg>
 
       <!-- sun and moon in the upper corners: din and raat, both -->
       <g opacity=".9">
-        <circle cx="46" cy="44" r="9" stroke-width="2"/>
-        <circle cx="46" cy="44" r="5" stroke-width="1" opacity=".7"/>
+        <circle pathLength="1" cx="46" cy="44" r="9" stroke-width="2"/>
+        <circle pathLength="1" cx="46" cy="44" r="5" stroke-width="1" opacity=".7"/>
         <g stroke-width="1.3">
-          <path d="M46 31 L46 26"/><path d="M46 57 L46 62"/>
-          <path d="M33 44 L28 44"/><path d="M59 44 L64 44"/>
-          <path d="M37 35 L33 31"/><path d="M55 53 L59 57"/>
-          <path d="M37 53 L33 57"/><path d="M55 35 L59 31"/>
+          <path pathLength="1" d="M46 31 L46 26"/><path pathLength="1" d="M46 57 L46 62"/>
+          <path pathLength="1" d="M33 44 L28 44"/><path pathLength="1" d="M59 44 L64 44"/>
+          <path pathLength="1" d="M37 35 L33 31"/><path pathLength="1" d="M55 53 L59 57"/>
+          <path pathLength="1" d="M37 53 L33 57"/><path pathLength="1" d="M55 35 L59 31"/>
         </g>
       </g>
-      <path d="M288 32 a10 10 0 0 0 15 15 a15 15 0 1 1 -15 -15Z" stroke-width="2" opacity=".9"/>
+      <path pathLength="1" d="M288 32 a10 10 0 0 0 15 15 a15 15 0 1 1 -15 -15Z" stroke-width="2" opacity=".9"/>
       <g fill="currentColor" stroke="none" opacity=".9">
-        <circle cx="300" cy="28" r="1.4"/><circle cx="310" cy="38" r="1.4"/>
-        <circle cx="36" cy="66" r="1.4"/><circle cx="58" cy="68" r="1.4"/>
-        <circle cx="30" cy="206" r="1.5"/><circle cx="24" cy="222" r="1.5"/>
-        <circle cx="38" cy="236" r="1.5"/><circle cx="26" cy="190" r="1.5"/>
-        <circle cx="312" cy="206" r="1.5"/><circle cx="318" cy="222" r="1.5"/>
-        <circle cx="304" cy="236" r="1.5"/><circle cx="316" cy="190" r="1.5"/>
-        <circle cx="166" cy="284" r="1.5"/><circle cx="252" cy="278" r="1.5"/>
-        <circle cx="86" cy="278" r="1.5"/>
-        <circle cx="112" cy="86" r="1.5"/><circle cx="228" cy="86" r="1.5"/>
-        <circle cx="150" cy="108" r="1.5"/><circle cx="192" cy="108" r="1.5"/>
+        <circle pathLength="1" cx="300" cy="28" r="1.4"/><circle pathLength="1" cx="310" cy="38" r="1.4"/>
+        <circle pathLength="1" cx="36" cy="66" r="1.4"/><circle pathLength="1" cx="58" cy="68" r="1.4"/>
+        <circle pathLength="1" cx="30" cy="206" r="1.5"/><circle pathLength="1" cx="24" cy="222" r="1.5"/>
+        <circle pathLength="1" cx="38" cy="236" r="1.5"/><circle pathLength="1" cx="26" cy="190" r="1.5"/>
+        <circle pathLength="1" cx="312" cy="206" r="1.5"/><circle pathLength="1" cx="318" cy="222" r="1.5"/>
+        <circle pathLength="1" cx="304" cy="236" r="1.5"/><circle pathLength="1" cx="316" cy="190" r="1.5"/>
+        <circle pathLength="1" cx="166" cy="284" r="1.5"/><circle pathLength="1" cx="252" cy="278" r="1.5"/>
+        <circle pathLength="1" cx="86" cy="278" r="1.5"/>
+        <circle pathLength="1" cx="112" cy="86" r="1.5"/><circle pathLength="1" cx="228" cy="86" r="1.5"/>
+        <circle pathLength="1" cx="150" cy="108" r="1.5"/><circle pathLength="1" cx="192" cy="108" r="1.5"/>
       </g>
 
       <!-- leaves banked against the side borders so no field is bare -->
@@ -779,6 +786,7 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
       <div class="head">
         <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
         <h1>Blogs</h1>
+        <a class="head-link" href="/blogs/feed.xml">rss &rarr;</a>
       </div>
       <!-- SWAP 1: one sentence. this is the page's whole first impression. -->
       <p class="page-lede">Notes on what broke, and what it cost.</p>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /worker/
+Disallow: /tools/
+
+Sitemap: https://ritik.wtf/sitemap.xml
