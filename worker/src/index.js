@@ -28,7 +28,7 @@ function tidy(p) {
   if (p.charAt(0) !== '/' || p.length > MAX_PATH) return '';
   if (!/^[A-Za-z0-9\-._~/]*$/.test(p.slice(1))) return '';
   if (p.indexOf('//') !== -1 || p.indexOf('..') !== -1) return '';
-  /* /blogs/index.html and /blogs/ are one page, not two. */
+  /* /log/index.html and /log/ are one page, not two. */
   if (p.slice(-11) === '/index.html') p = p.slice(0, -10);
   return p;
 }

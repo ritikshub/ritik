@@ -10,7 +10,7 @@ The number is set small in the footer of every page, beside "Made in Bihar."
 One integer per path. That is the entire data model:
 
 ```json
-{ "/": 412, "/blogs/": 96, "/blogs/one-hour-at-the-tapri.html": 231, "/projects/": 140 }
+{ "/": 412, "/log/": 96, "/projects/": 140 }
 ```
 
 No cookies. No IP or user-agent logging. No referrers. No visitor ids, no
@@ -60,7 +60,7 @@ counts. Add your local server there while working on the site.
 
 ## What counts as a page
 
-- `/blogs/` and `/blogs/index.html` are one page, not two.
+- `/log/` and `/log/index.html` are one page, not two.
 - Query strings and hashes are stripped, so `/?utm_source=…` does not split
   the count.
 - Paths must look like paths: leading slash, ≤128 chars, no `..`, no `//`,

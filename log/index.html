@@ -3,19 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blogs · Ritik</title>
-<!-- SWAP: description for this page. -->
-<meta name="description" content="Notes on building software for restaurants, and what breaks.">
+<title>Log · Ritik</title>
+<meta name="description" content="What Ritik built, learned, or broke, one true line at a time.">
 <meta name="theme-color" content="#11141f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="canonical" href="https://ritik.wtf/blogs/">
-<link rel="alternate" type="application/rss+xml" title="Ritik &middot; blogs" href="/blogs/feed.xml">
+<link rel="canonical" href="https://ritik.wtf/log/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ritik.wtf/blogs/">
-<meta property="og:title" content="Blogs · Ritik">
-<meta property="og:description" content="Notes on building software for restaurants, and what breaks.">
+<meta property="og:url" content="https://ritik.wtf/log/">
+<meta property="og:title" content="Log · Ritik">
+<meta property="og:description" content="What got built, learned, or broken, one line at a time.">
 <meta property="og:image" content="https://ritik.wtf/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -768,7 +766,7 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
       <time class="num" id="ghari-t"><span class="d" id="ghari-d"></span><span class="dot" aria-hidden="true">·</span><span id="ghari-hm"></span></time><span class="zone">IST</span>
     </p>
     <nav class="nav" aria-label="Sections">
-      <a href="/blogs/" aria-current="page"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>blogs</a>
+      <a href="/log/" aria-current="page"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>log</a>
       <a href="/projects/"><svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>projects</a>
     </nav>
     <button class="lamp" id="lamp" type="button" aria-label="Switch to raat — dark">
@@ -785,14 +783,12 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
     <div>
       <div class="head">
         <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
-        <h1>Blogs</h1>
-        <a class="head-link" href="/blogs/feed.xml">rss &rarr;</a>
+        <h1>Log</h1>
       </div>
-      <!-- SWAP 1: one sentence. this is the page's whole first impression. -->
-      <p class="page-lede">Notes on what broke, and what it cost.</p>
+      <p class="page-lede">What got built, learned, or broken. One line each.</p>
     </div>
-    <!-- the twin fish: Mithila paints them for fortune, and they are
-         what the pond looks like once you stop skimming the top of it. -->
+    <!-- the twin fish: Mithila paints them for fortune, and a log is the
+         day's catch, written down before it is forgotten. -->
     <div class="top-art">
       <svg class="panel" viewBox="0 0 340 300" role="img"
            aria-label="Madhubani panel in the kachni line style: the twin fish of the Mithila pond, among lotus and reeds">
@@ -803,44 +799,85 @@ setTimeout(function(){if(!window.__revealed)d.classList.remove('reveal-ready');}
 </section>
 <div class="rule" aria-hidden="true"><svg class="bloom"><use href="#bloom-mini"/></svg></div>
 
+<!-- ================================================================
+     THE LOG — the ledger on the home page, finer grained. one true
+     line per entry, dated, newest first. the geru lotus (class "now")
+     sits on the newest line and moves down as new ones go in above.
+     the rule for an entry: it happened, and it fits in one sentence.
+     when the year turns, add a .log-year and a fresh .tl above.
+     ================================================================ -->
 <section data-reveal>
-  <!-- SWAP 2: every post you have published, newest first. each one is its
-       own file under /blogs/. add a .w-year heading when a year turns over. -->
-  <p class="w-year num">2026</p>
-  <div class="w-rows">
-    <a class="w-row" href="/blogs/one-hour-at-the-tapri.html">
-      <span class="when num">Aug 2026</span>
-      <span>
-        <h3>One hour at the tapri</h3>
-        <p>One hour a day inside something that does not break. Chai, memory,
-          and the shop with no name.</p>
-      </span>
-      <span class="go" aria-hidden="true">&rarr;</span>
-    </a>
-    <div class="w-row draft">
-      <span class="when num">Aug 2026</span>
-      <span>
-        <h3>The vendor who does not take WhatsApp</h3>
-        <p>Four screens told the same lie for six months. What it costs when software
-          assumes everyone is reachable the same way.</p>
-      </span>
-      <span class="soon">soon</span>
+  <p class="log-year num">2026</p>
+  <div class="tl log">
+    <div class="tl-row now">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-09-05">5 Sep</time>
+      <p>Every painting on this site draws itself in now. The lamp wipes
+      instead of snapping.</p>
     </div>
-    <div class="w-row draft">
-      <span class="when num">Jul 2026</span>
-      <span>
-        <h3>Three second looks</h3>
-        <p>Nobody reads a dashboard. Designing for the glance, not the study.</p>
-      </span>
-      <span class="soon">soon</span>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-08-24">24 Aug</time>
+      <p>Took every em dash out of the Foundations lessons in
+      <a href="https://github.com/ritikshub/buildingbackend" rel="noopener">buildingbackend</a>,
+      and turned the crowded bits-and-bytes diagram into one worked example.</p>
     </div>
-    <div class="w-row draft">
-      <span class="when num">Jun 2026</span>
-      <span>
-        <h3>4,240 litres of milk in one cafe day</h3>
-        <p>One missing column in an upsert added grams to litres. Nothing errored.</p>
-      </span>
-      <span class="soon">soon</span>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-08-22">22 Aug</time>
+      <p>This site got a visit counter: one integer per page, nothing about
+      anybody. Not switched on yet.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-08-14">14 Aug</time>
+      <p><a href="https://github.com/ritikshub/bug-eater" rel="noopener">bug-eater</a>:
+      a Telegram bot that swallows a screenshot and spits out a Jira ticket.
+      FastAPI, python-telegram-bot, Docker.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-08-12">12 Aug</time>
+      <p>The name answers in Devanagari now, and the bar keeps the hour in IST.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-08-10">10 Aug</time>
+      <p>Every page hangs a painting. The books shelf comes down.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-08-08">8 Aug</time>
+      <p>ritik.wtf goes up.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-07-19">19 Jul</time>
+      <p><a href="https://github.com/ritikshub/buildingbackend" rel="noopener">buildingbackend</a>
+      goes public: backend engineering from zero, standard library only, written
+      down as I go.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-03-08">8 Mar</time>
+      <p><a href="https://github.com/ritikshub/findmywork" rel="noopener">findmywork</a>:
+      a government job finder.</p>
+    </div>
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2026-01-16">16 Jan</time>
+      <p><a href="https://github.com/ritikshub/rolling-events-count" rel="noopener">rolling-events-count</a>:
+      events in a rolling time window, done properly.</p>
+    </div>
+  </div>
+
+  <p class="log-year num">2025</p>
+  <div class="tl log">
+    <div class="tl-row">
+      <svg class="bloom" aria-hidden="true"><use href="#bloom-mini"/></svg>
+      <time class="when num" datetime="2025-12-12">12 Dec</time>
+      <p><a href="https://github.com/ritikshub/jss" rel="noopener">jss</a>: a job
+      scheduler on Node, BullMQ, Redis and Mongo. Queues, retries, dead workers.</p>
     </div>
   </div>
 </section>

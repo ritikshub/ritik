@@ -18,9 +18,8 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const pages = [
   'index.html',
-  'blogs/index.html',
+  'log/index.html',
   'projects/index.html',
-  'blogs/one-hour-at-the-tapri.html',
   '404.html',
 ];
 

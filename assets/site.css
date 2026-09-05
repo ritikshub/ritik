@@ -406,121 +406,11 @@ main{ flex:1 0 auto; }
   .links a{ padding-top:8px; }
 }
 
-/* ----------------------------------------------------------
-   BLOGS — A · Dated rows
-   ---------------------------------------------------------- */
-.w-rows{ display:flex; flex-direction:column; }
-.w-row{
-  display:grid; grid-template-columns:auto 1fr auto; gap:var(--sp-md) var(--sp-lg);
-  align-items:baseline; padding:var(--sp-lg) 0; text-decoration:none;
-  border-top:1px solid var(--hair-2);
-}
-.w-row:last-child{ border-bottom:1px solid var(--hair-2); }
-@media (max-width:640px){
-  .w-row{ grid-template-columns:1fr auto; }
-  .w-row .when{ grid-column:1/-1; }
-}
-.w-row .when{
-  font-size:.75rem; font-weight:500; color:var(--ink-3);
-  font-variant-numeric:tabular-nums; white-space:nowrap; min-width:5.5rem;
-}
-.w-row h3{
-  font-family:"Eczar",serif; font-weight:500; font-size:1.24rem; line-height:1.3;
-  margin-bottom:var(--sp-2xs); transition:color var(--fast);
-}
-.w-row p{ font-size:.88rem; color:var(--ink-3); max-width:58ch; }
-.w-row .go{ align-self:center; color:var(--ink-3);
-  transition:transform var(--mid) var(--quint), color var(--fast); }
-a.w-row:hover h3{ color:var(--geru); }
-a.w-row:hover .go{ transform:translateX(5px); color:var(--geru); }
-
-/* a post that is titled but not written yet. it sits in the list
-   because the list is the plan, but it does not pretend to be a link. */
-.w-row.draft h3,.w-row.draft p{ color:var(--ink-3); }
-.w-row .soon{
-  align-self:center; font-size:.66rem; font-weight:600; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--ink-3); white-space:nowrap;
-  border:1px solid var(--hair); border-radius:2px; padding:2px 7px;
-}
-.w-year{
-  font-family:"Eczar",serif; font-weight:500; font-size:1.1rem; color:var(--ink-3);
-  margin:var(--sp-2xl) 0 var(--sp-sm); font-variant-numeric:tabular-nums;
-}
 .more{
   display:inline-block; margin-top:var(--sp-lg); font-size:.84rem; font-weight:500;
   color:var(--ink-3); text-decoration:none; transition:color var(--fast);
 }
 .more:hover{ color:var(--geru); }
-
-/* ----------------------------------------------------------
-   BLOG POST — a dated column of prose under the shared chrome.
-   Eczar for the title, Hind for the body, 66ch cap as ever.
-   ---------------------------------------------------------- */
-.post-title{
-  font-family:"Eczar",serif; font-weight:600; line-height:1.14; letter-spacing:-.012em;
-  font-size:clamp(1.9rem,4.4vw,2.7rem); max-width:24ch; margin-bottom:var(--sp-sm);
-}
-.post-meta{ font-size:.78rem; color:var(--ink-3); }
-.post-body p{ margin-bottom:var(--sp-lg); }
-.post-body p:last-child{ margin-bottom:0; }
-/* the first letter is set large in Eczar and in geru: the one place
-   on a post the accent is allowed, and it opens the page the way a
-   painted panel opens a wall. */
-.post-body > p:first-of-type::first-letter{
-  font-family:"Eczar",serif; font-weight:600; color:var(--geru);
-  font-size:3.6em; line-height:.78; float:left;
-  margin:.09em .16em 0 0; padding-top:.04em;
-}
-.post-body a{
-  color:var(--ink); text-decoration-color:var(--hair); text-underline-offset:3px;
-  transition:color var(--fast), text-decoration-color var(--fast);
-}
-.post-body a:hover{ color:var(--geru); text-decoration-color:var(--geru); }
-.post-body strong,.post-body b{ font-weight:600; }
-.post-body h2,.post-body h3{
-  font-family:"Eczar",serif; font-weight:500; line-height:1.25; letter-spacing:-.005em;
-  margin:var(--sp-2xl) 0 var(--sp-md);
-}
-.post-body h2{ font-size:1.5rem; }
-.post-body h3{ font-size:1.18rem; }
-.post-body ul,.post-body ol{ margin:0 0 var(--sp-lg); padding-left:1.5em; }
-.post-body ol{ list-style:decimal; }
-.post-body li{ margin-bottom:var(--sp-xs); }
-.post-body ul li{ position:relative; }
-/* a six-petal lotus for a bullet, cut from the ink with a mask so it
-   takes the token colour in both times of day */
-.post-body ul li::before{
-  content:''; position:absolute; left:-1.35em; top:.62em; width:.62em; height:.62em;
-  background:var(--ink-3);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c2.2 2.4 2.2 5.6 0 8-2.2-2.4-2.2-5.6 0-8zm0 20c-2.2-2.4-2.2-5.6 0-8 2.2 2.4 2.2 5.6 0 8zM2 12c2.4-2.2 5.6-2.2 8 0-2.4 2.2-5.6 2.2-8 0zm20 0c-2.4 2.2-5.6 2.2-8 0 2.4-2.2 5.6-2.2 8 0zM4.9 4.9c3.3.1 5.5 2.3 5.7 5.7-3.3-.1-5.5-2.3-5.7-5.7zm14.2 14.2c-3.3-.1-5.5-2.3-5.7-5.7 3.3.1 5.5 2.3 5.7 5.7zM4.9 19.1c.1-3.3 2.3-5.5 5.7-5.7-.1 3.3-2.3 5.5-5.7 5.7zM19.1 4.9c-.1 3.3-2.3 5.5-5.7 5.7.1-3.3 2.3-5.5 5.7-5.7z'/%3E%3C/svg%3E") center/contain no-repeat;
-          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c2.2 2.4 2.2 5.6 0 8-2.2-2.4-2.2-5.6 0-8zm0 20c-2.2-2.4-2.2-5.6 0-8 2.2 2.4 2.2 5.6 0 8zM2 12c2.4-2.2 5.6-2.2 8 0-2.4 2.2-5.6 2.2-8 0zm20 0c-2.4 2.2-5.6 2.2-8 0 2.4-2.2 5.6-2.2 8 0zM4.9 4.9c3.3.1 5.5 2.3 5.7 5.7-3.3-.1-5.5-2.3-5.7-5.7zm14.2 14.2c-3.3-.1-5.5-2.3-5.7-5.7 3.3.1 5.5 2.3 5.7 5.7zM4.9 19.1c.1-3.3 2.3-5.5 5.7-5.7-.1 3.3-2.3 5.5-5.7 5.7zM19.1 4.9c-.1 3.3-2.3 5.5-5.7 5.7.1-3.3 2.3-5.5 5.7-5.7z'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-.post-body blockquote{
-  margin:var(--sp-xl) 0; padding:0 0 0 var(--sp-lg);
-  border-left:1px solid var(--hair);
-  font-family:"Eczar",serif; font-size:1.16rem; line-height:1.5; color:var(--ink-2);
-}
-.post-body blockquote p{ margin-bottom:var(--sp-sm); }
-.post-body blockquote cite{ display:block; font-family:"Hind",sans-serif; font-style:normal;
-  font-size:.78rem; color:var(--ink-3); margin-top:var(--sp-xs); }
-.post-body code{
-  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:.86em;
-  background:var(--paper-2); padding:.12em .38em; border-radius:3px;
-}
-.post-body pre{
-  margin:0 0 var(--sp-lg); padding:var(--sp-md) var(--sp-lg); overflow-x:auto;
-  background:var(--paper-2); border-radius:4px; font-size:.84rem; line-height:1.6;
-}
-.post-body pre code{ background:none; padding:0; font-size:1em; }
-.post-body figure{ margin:var(--sp-xl) 0; }
-.post-body figcaption{ font-size:.78rem; color:var(--ink-3); margin-top:var(--sp-xs); }
-.post-body hr{ border:0; border-top:1px solid var(--hair); margin:var(--sp-xl) 0; }
-/* the post closes on one full lotus, quiet ink, the way a painted
-   panel closes on its border */
-.post-end{ display:flex; justify-content:center; margin-top:var(--sp-2xl); }
-.post-end .bloom{ width:34px; height:34px; color:var(--ink-3); opacity:.8; }
-.post-end + .more{ margin-top:var(--sp-xl); }
-.post-body + .more{ margin-top:var(--sp-2xl); }
 
 /* ----------------------------------------------------------
    SINCE 1999 — the life ledger on the profile, a yatra of
@@ -546,10 +436,26 @@ a.w-row:hover .go{ transform:translateX(5px); color:var(--geru); }
   font-variant-numeric:tabular-nums; white-space:nowrap;
 }
 .tl-row p{ font-size:.92rem; color:var(--ink-2); }
+.tl-row p a{
+  color:var(--ink); text-decoration-color:var(--hair); text-underline-offset:3px;
+  transition:color var(--fast), text-decoration-color var(--fast);
+}
+.tl-row p a:hover{ color:var(--geru); text-decoration-color:var(--geru); }
 @media (max-width:560px){
   .tl-row{ grid-template-columns:14px 1fr; }
   .tl-row p{ grid-column:2; }
 }
+
+/* the log at /log/ is the same ledger, finer grained: a day column
+   instead of a span of years, grouped under one Eczar year head. the
+   geru lotus sits on the newest line. */
+.log-year{
+  font-family:"Eczar",serif; font-weight:500; font-size:1.1rem; color:var(--ink-3);
+  margin:var(--sp-2xl) 0 var(--sp-sm); font-variant-numeric:tabular-nums;
+}
+.log-year:first-child{ margin-top:0; }
+.tl.log .tl-row{ grid-template-columns:14px 4.4rem 1fr; }
+@media (max-width:560px){ .tl.log .tl-row{ grid-template-columns:14px 1fr; } }
 
 /* ----------------------------------------------------------
    PROJECTS — A · Lead + grid
